@@ -1,0 +1,2 @@
+# compettable
+репозиторий проекта CompetTable
