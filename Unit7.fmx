@@ -1,0 +1,4687 @@
+object frm: Tfrm
+  Left = 0
+  Top = 0
+  Caption = 'frm'
+  ClientHeight = 800
+  ClientWidth = 720
+  StyleBook = StyleBook1
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  OnKeyUp = FormKeyUp
+  OnFocusChanged = FormFocusChanged
+  OnVirtualKeyboardShown = FormVirtualKeyboardShown
+  OnVirtualKeyboardHidden = FormVirtualKeyboardHidden
+  DesignerMasterStyle = 0
+  object tControl: TTabControl
+    Align = Client
+    Size.Width = 720.000000000000000000
+    Size.Height = 800.000000000000000000
+    Size.PlatformDefault = False
+    TabIndex = 2
+    TabOrder = 0
+    TabPosition = None
+    object tiTour: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tiTour'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object rectangle1: TRectangle
+        Align = MostTop
+        Fill.Color = claTeal
+        Size.Width = 50.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object sBtnExit: TSpeedButton
+          Align = MostLeft
+          Images = iList36
+          ImageIndex = 0
+          Margins.Left = 22.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Bottom = 13.000000000000000000
+          Position.X = 22.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = sBtnExitClick
+        end
+        object sBtnAdd: TSpeedButton
+          Tag = 5
+          Align = MostLeft
+          Images = iList36
+          ImageIndex = 1
+          Margins.Left = 22.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Bottom = 13.000000000000000000
+          Position.X = 80.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = sBtnAddClick
+        end
+        object sBtnRed: TSpeedButton
+          Tag = 6
+          Align = MostLeft
+          Images = iList36
+          ImageIndex = 2
+          Margins.Left = 22.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Bottom = 13.000000000000000000
+          Position.X = 138.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = sBtnAddClick
+        end
+        object sBtnDel: TSpeedButton
+          Align = MostLeft
+          Images = iList36
+          ImageIndex = 3
+          Margins.Left = 22.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Bottom = 13.000000000000000000
+          Position.X = 196.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = sBtnDelClick
+        end
+        object sBtnOpt: TSpeedButton
+          Align = MostLeft
+          Images = iList36
+          ImageIndex = 4
+          Margins.Left = 22.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Bottom = 13.000000000000000000
+          Position.X = 312.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = sBtnOptClick
+        end
+        object sBtnCopy: TSpeedButton
+          Align = MostLeft
+          Images = iList36
+          ImageIndex = 18
+          Margins.Left = 22.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Bottom = 13.000000000000000000
+          Position.X = 254.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = sBtnCopyClick
+        end
+      end
+      object lViewTour: TListView
+        ItemAppearanceClassName = 'TImageListItemBottomDetailRightButtonAppearance'
+        ItemEditAppearanceClassName = 'TImageListItemBottomDetailRightButtonShowCheckAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        OnUpdatingObjects = lViewTourUpdatingObjects
+        Align = Client
+        Size.Width = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        ItemAppearanceObjects.ItemObjects.Detail.TextColor = claTeal
+        ItemAppearanceObjects.ItemObjects.Image.Visible = False
+        ItemAppearanceObjects.ItemObjects.TextButton.Text = 'tourney'
+        ItemAppearanceObjects.ItemEditObjects.Detail.TextColor = claTeal
+        ItemAppearanceObjects.ItemEditObjects.TextButton.Text = 'tourney'
+        CanSwipeDelete = False
+        OnItemClickEx = lViewTourItemClickEx
+        OnButtonClick = lViewTourButtonClick
+      end
+      object rectangle2: TRectangle
+        Align = MostBottom
+        Fill.Color = claTeal
+        Position.Y = -38.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 88.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object memo: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          Lines.Strings = (
+            'memo')
+          ReadOnly = True
+          Align = Client
+          Opacity = 0.800000011920929000
+          Padding.Left = 2.000000000000000000
+          Padding.Top = 2.000000000000000000
+          Padding.Right = 2.000000000000000000
+          Padding.Bottom = 2.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 88.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 46.000000000000000000
+          Viewport.Height = 84.000000000000000000
+        end
+      end
+    end
+    object tiTedit: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tiTedit'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object rectangle3: TRectangle
+        Align = MostTop
+        Fill.Color = claTeal
+        Size.Width = 50.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object layout0: TLayout
+          Align = Center
+          Size.Width = 190.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object sBtnTsave: TSpeedButton
+            Align = MostLeft
+            StyledSettings = [Family]
+            Size.Width = 90.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'OK'
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.Font.Style = [fsBold]
+            TextSettings.FontColor = claWhite
+            OnClick = sBtnTsaveClick
+          end
+          object sBtnTcancel: TSpeedButton
+            Align = MostRight
+            StyledSettings = [Family]
+            Position.X = 90.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Cancel'
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.Font.Style = [fsBold]
+            TextSettings.FontColor = claWhite
+            OnClick = sBtnTcancelClick
+          end
+        end
+        object sBtnTback: TSpeedButton
+          Align = MostLeft
+          Images = iList36
+          ImageIndex = 5
+          Margins.Left = 22.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Bottom = 13.000000000000000000
+          Position.X = 22.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = sBtnTbackClick
+        end
+        object btnTkeyb: TButton
+          Align = MostRight
+          Images = iList36
+          ImageIndex = 6
+          Margins.Top = 6.000000000000000000
+          Margins.Right = 22.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = -8.000000000000000000
+          Position.Y = 6.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+      end
+      object vertScrollBox1: TVertScrollBox
+        Align = Client
+        Padding.Left = 5.000000000000000000
+        Padding.Right = 5.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 50.000000000000000000
+        Viewport.Height = 0.000000000000000000
+        object mainLayout1: TLayout
+          Align = Client
+          Size.Width = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object layout1: TLayout
+            Align = MostTop
+            Size.Width = 40.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object eTname: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 0
+              ReturnKeyType = Next
+              MaxLength = 150
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'Name tournament*'
+              OnKeyDown = eTnameKeyDown
+              OnExit = eTnameExit
+              object clearEditButton10: TClearEditButton
+                CanFocus = False
+                Cursor = crArrow
+                Size.Width = 28.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+          end
+          object layout2: TLayout
+            Align = MostTop
+            Position.Y = 44.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object eTcountry: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 0
+              ReturnKeyType = Next
+              MaxLength = 50
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'Country'
+              OnKeyDown = eTnameKeyDown
+              OnExit = eTnameExit
+              object clearEditButton11: TClearEditButton
+                CanFocus = False
+                Cursor = crArrow
+                Size.Width = 28.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+          end
+          object layout3: TLayout
+            Align = MostTop
+            Position.Y = 88.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object eTregion: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 0
+              ReturnKeyType = Next
+              MaxLength = 50
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'Region'
+              OnKeyDown = eTnameKeyDown
+              OnExit = eTnameExit
+              object clearEditButton12: TClearEditButton
+                CanFocus = False
+                Cursor = crArrow
+                Size.Width = 28.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+          end
+          object layout4: TLayout
+            Align = MostTop
+            Position.Y = 132.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+            object eTcity: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 0
+              ReturnKeyType = Next
+              MaxLength = 50
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'City'
+              OnKeyDown = eTnameKeyDown
+              OnExit = eTnameExit
+              object clearEditButton13: TClearEditButton
+                CanFocus = False
+                Cursor = crArrow
+                Size.Width = 28.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+          end
+          object layout5: TLayout
+            Align = MostTop
+            Position.Y = 176.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+            object eTchief: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 0
+              ReturnKeyType = Next
+              MaxLength = 50
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'Chief judge Full Name'
+              OnKeyDown = eTnameKeyDown
+              OnExit = eTnameExit
+              object clearEditButton14: TClearEditButton
+                CanFocus = False
+                Cursor = crArrow
+                Size.Width = 28.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+          end
+          object layout6: TLayout
+            Align = MostTop
+            Position.Y = 220.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 5
+            object eTsecret: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 0
+              ReturnKeyType = Next
+              MaxLength = 50
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'Secretary Full Name'
+              OnKeyDown = eTnameKeyDown
+              OnExit = eTnameExit
+              object clearEditButton15: TClearEditButton
+                CanFocus = False
+                Cursor = crArrow
+                Size.Width = 28.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+          end
+          object layout7: TLayout
+            Align = MostTop
+            Position.Y = 264.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 6
+            object dEprov: TDateEdit
+              Date = 42370.000000000000000000
+              DateFormatKind = Long
+              Align = Client
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+            end
+          end
+          object rectangle4: TRectangle
+            Align = MostTop
+            Fill.Color = claTeal
+            Position.Y = 308.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 39.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            object Label1: TLabel
+              Align = MostLeft
+              AutoSize = True
+              StyledSettings = [Family, Size, Style]
+              Margins.Left = 4.000000000000000000
+              Position.X = 4.000000000000000000
+              Size.Width = 133.000000000000000000
+              Size.Height = 39.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listboxheaderlabel'
+              TextSettings.FontColor = claWhite
+              TextSettings.WordWrap = False
+              Text = 'SCORE POINTS'
+            end
+            object Label5: TLabel
+              Align = MostRight
+              AutoSize = True
+              StyledSettings = [Family, Size, Style]
+              Position.X = -155.000000000000000000
+              Size.Width = 195.000000000000000000
+              Size.Height = 39.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'listboxheaderlabel'
+              TextSettings.FontColor = claWhite
+              TextSettings.WordWrap = False
+              Text = 'Tournament (up to 32)'
+            end
+          end
+          object layout11: TLayout
+            Align = MostTop
+            Position.Y = 347.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 138.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 7
+            object layout12: TLayout
+              Align = MostLeft
+              Size.Width = 240.000000000000000000
+              Size.Height = 138.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 8
+              object layout8: TLayout
+                Align = MostTop
+                Size.Width = 240.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 8
+                object label2: TLabel
+                  Align = MostLeft
+                  Margins.Right = 12.000000000000000000
+                  Size.Width = 94.000000000000000000
+                  Size.Height = 44.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.HorzAlign = Trailing
+                  Text = 'for a winer'
+                end
+                object nBox1: TNumberBox
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = MostLeft
+                  TabOrder = 1
+                  Cursor = crIBeam
+                  TextSettings.Font.Style = [fsBold]
+                  TextSettings.FontColor = claCrimson
+                  Position.X = 106.000000000000000000
+                  Position.Y = 6.000000000000000000
+                  Margins.Top = 6.000000000000000000
+                  Margins.Bottom = 12.000000000000000000
+                  Size.Width = 44.000000000000000000
+                  Size.Height = 26.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, Size]
+                  OnKeyDown = eTnameKeyDown
+                end
+              end
+              object layout9: TLayout
+                Align = MostTop
+                Position.Y = 44.000000000000000000
+                Size.Width = 240.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 9
+                object label3: TLabel
+                  Align = MostLeft
+                  Margins.Right = 12.000000000000000000
+                  Size.Width = 94.000000000000000000
+                  Size.Height = 44.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.HorzAlign = Trailing
+                  Text = 'for a draw'
+                end
+                object nBox2: TNumberBox
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = MostLeft
+                  TabOrder = 1
+                  Cursor = crIBeam
+                  TextSettings.Font.Style = [fsBold]
+                  TextSettings.FontColor = claCrimson
+                  Position.X = 106.000000000000000000
+                  Position.Y = 6.000000000000000000
+                  Margins.Top = 6.000000000000000000
+                  Margins.Bottom = 12.000000000000000000
+                  Size.Width = 44.000000000000000000
+                  Size.Height = 26.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, Size]
+                  OnKeyDown = eTnameKeyDown
+                end
+              end
+              object layout10: TLayout
+                Align = MostTop
+                Position.Y = 88.000000000000000000
+                Size.Width = 240.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 10
+                object label4: TLabel
+                  Align = MostLeft
+                  Margins.Right = 12.000000000000000000
+                  Size.Width = 94.000000000000000000
+                  Size.Height = 44.000000000000000000
+                  Size.PlatformDefault = False
+                  TextSettings.HorzAlign = Trailing
+                  Text = 'for a loser'
+                end
+                object nBox3: TNumberBox
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = MostLeft
+                  TabOrder = 1
+                  Cursor = crIBeam
+                  TextSettings.Font.Style = [fsBold]
+                  TextSettings.FontColor = claCrimson
+                  Position.X = 106.000000000000000000
+                  Position.Y = 6.000000000000000000
+                  Margins.Top = 6.000000000000000000
+                  Margins.Bottom = 12.000000000000000000
+                  Size.Width = 44.000000000000000000
+                  Size.Height = 26.000000000000000000
+                  Size.PlatformDefault = False
+                  StyledSettings = [Family, Size]
+                  KillFocusByReturn = True
+                end
+              end
+            end
+            object layout13: TLayout
+              Align = Client
+              Size.Height = 138.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 12
+              object layout14: TLayout
+                Align = MostTop
+                Size.Width = 50.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 13
+                object rBtn1: TRadioButton
+                  Align = MostRight
+                  GroupName = 'teamPers'
+                  IsChecked = True
+                  Margins.Right = 4.000000000000000000
+                  Position.X = -54.000000000000000000
+                  Size.Width = 100.000000000000000000
+                  Size.Height = 44.000000000000000000
+                  Size.PlatformDefault = False
+                  StyleLookup = 'rBtn1Style1'
+                  TabOrder = 0
+                  Text = 'Team'
+                  TextSettings.HorzAlign = Trailing
+                end
+              end
+              object layout15: TLayout
+                Align = MostTop
+                Position.Y = 44.000000000000000000
+                Size.Width = 50.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 14
+                object rBtn2: TRadioButton
+                  Align = MostRight
+                  GroupName = 'teamPers'
+                  Margins.Right = 4.000000000000000000
+                  Position.X = -54.000000000000000000
+                  Size.Width = 100.000000000000000000
+                  Size.Height = 44.000000000000000000
+                  Size.PlatformDefault = False
+                  StyleLookup = 'rBtn2Style1'
+                  TabOrder = 0
+                  Text = 'Personal'
+                  TextSettings.HorzAlign = Trailing
+                end
+              end
+            end
+          end
+        end
+      end
+    end
+    object tiMain: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tiMain'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object tCmain: TTabControl
+        Align = Client
+        Size.Width = 720.000000000000000000
+        Size.Height = 800.000000000000000000
+        Size.PlatformDefault = False
+        TabIndex = 1
+        TabOrder = 0
+        TabPosition = Bottom
+        object tiWho: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = False
+          Size.Width = 83.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Who (From)'
+          ExplicitSize.cx = 70.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+          object rectangle5: TRectangle
+            Align = MostTop
+            Fill.Color = claTeal
+            Size.Width = 50.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            object sBtnCCadd: TSpeedButton
+              Tag = 5
+              Align = MostLeft
+              Images = iList36
+              ImageIndex = 10
+              Margins.Left = 22.000000000000000000
+              Margins.Top = 1.000000000000000000
+              Margins.Bottom = 13.000000000000000000
+              Position.X = 80.000000000000000000
+              Position.Y = 1.000000000000000000
+              Size.Width = 36.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              OnClick = sBtnCCaddClick
+            end
+            object sBtnCCdel: TSpeedButton
+              Align = MostLeft
+              Images = iList36
+              ImageIndex = 12
+              Margins.Left = 22.000000000000000000
+              Margins.Top = 1.000000000000000000
+              Margins.Bottom = 13.000000000000000000
+              Position.X = 196.000000000000000000
+              Position.Y = 1.000000000000000000
+              Size.Width = 36.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              OnClick = sBtnCCdelClick
+            end
+            object sBtnWback: TSpeedButton
+              Align = MostLeft
+              Images = iList36
+              ImageIndex = 5
+              Margins.Left = 22.000000000000000000
+              Margins.Top = 1.000000000000000000
+              Margins.Bottom = 13.000000000000000000
+              Position.X = 22.000000000000000000
+              Position.Y = 1.000000000000000000
+              Size.Width = 36.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              OnClick = sBtnWbackClick
+            end
+            object sBtnCCred: TSpeedButton
+              Tag = 6
+              Align = MostLeft
+              Images = iList36
+              ImageIndex = 11
+              Margins.Left = 22.000000000000000000
+              Margins.Top = 1.000000000000000000
+              Margins.Bottom = 13.000000000000000000
+              Position.X = 138.000000000000000000
+              Position.Y = 1.000000000000000000
+              Size.Width = 36.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              OnClick = sBtnCCaddClick
+            end
+          end
+          object lVwho: TListView
+            ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+            ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            OnUpdateObjects = lVwhoUpdateObjects
+            Align = Client
+            Size.Width = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            ItemAppearanceObjects.ItemObjects.Accessory.Visible = False
+            ItemAppearanceObjects.ItemObjects.Detail.TextColor = claTeal
+            CanSwipeDelete = False
+            OnItemClick = lVwhoItemClick
+          end
+        end
+        object tiMatch: TTabItem
+          CustomIcon = <
+            item
+            end>
+          IsSelected = True
+          Size.Width = 65.000000000000000000
+          Size.Height = 26.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = ''
+          TabOrder = 0
+          Text = 'Matches'
+          ExplicitSize.cx = 70.000000000000000000
+          ExplicitSize.cy = 26.000000000000000000
+          object rectangle6: TRectangle
+            Align = MostTop
+            Fill.Color = claTeal
+            Size.Width = 720.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Stroke.Kind = None
+            object sBtnMback: TSpeedButton
+              Align = MostLeft
+              Images = iList36
+              ImageIndex = 5
+              Margins.Left = 22.000000000000000000
+              Margins.Top = 1.000000000000000000
+              Margins.Bottom = 13.000000000000000000
+              Position.X = 22.000000000000000000
+              Position.Y = 1.000000000000000000
+              Size.Width = 36.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              OnClick = sBtnWbackClick
+            end
+            object sBtnKrug: TSpeedButton
+              Align = MostLeft
+              Images = iList36
+              ImageIndex = 13
+              Margins.Left = 22.000000000000000000
+              Margins.Top = 1.000000000000000000
+              Margins.Bottom = 13.000000000000000000
+              Position.X = 80.000000000000000000
+              Position.Y = 1.000000000000000000
+              Size.Width = 36.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              OnClick = sBtnKrugClick
+            end
+            object sBtnPlace: TSpeedButton
+              Align = MostLeft
+              Images = iList36
+              ImageIndex = 14
+              Margins.Left = 22.000000000000000000
+              Margins.Top = 1.000000000000000000
+              Margins.Bottom = 13.000000000000000000
+              Position.X = 196.000000000000000000
+              Position.Y = 1.000000000000000000
+              Size.Width = 36.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              OnClick = sBtnPlaceClick
+            end
+            object layout27: TLayout
+              Align = MostLeft
+              Margins.Left = 12.000000000000000000
+              Position.X = 244.000000000000000000
+              Size.Width = 130.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object rBstart: TRadioButton
+                StyledSettings = [Family, Size, Style]
+                GroupName = 'match'
+                Position.Y = 1.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 19.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                Text = 'start order'
+                TextSettings.FontColor = claWhite
+              end
+              object rBfinish: TRadioButton
+                StyledSettings = [Family, Size, Style]
+                GroupName = 'match'
+                IsChecked = True
+                Position.Y = 28.000000000000000000
+                Size.Width = 120.000000000000000000
+                Size.Height = 19.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                Text = 'finish order'
+                TextSettings.FontColor = claWhite
+              end
+            end
+            object sBtnOlimp: TSpeedButton
+              Align = MostLeft
+              Images = iList36
+              ImageIndex = 16
+              Margins.Left = 22.000000000000000000
+              Margins.Top = 1.000000000000000000
+              Margins.Bottom = 13.000000000000000000
+              Position.X = 138.000000000000000000
+              Position.Y = 1.000000000000000000
+              Size.Width = 36.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+              OnClick = sBtnOlimpClick
+            end
+            object sBtnTbl: TSpeedButton
+              Align = MostLeft
+              Images = iList36
+              ImageIndex = 19
+              Margins.Left = 22.000000000000000000
+              Margins.Top = 1.000000000000000000
+              Margins.Bottom = 13.000000000000000000
+              Position.X = 396.000000000000000000
+              Position.Y = 1.000000000000000000
+              Size.Width = 36.000000000000000000
+              Size.Height = 36.000000000000000000
+              Size.PlatformDefault = False
+            end
+          end
+          object lVmatch: TListView
+            ItemAppearanceClassName = 'TImageListItemBottomDetailRightButtonAppearance'
+            ItemEditAppearanceClassName = 'TImageListItemBottomDetailRightButtonShowCheckAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            OnUpdateObjects = lVmatchUpdateObjects
+            Images = iList36
+            Align = Client
+            Size.Width = 720.000000000000000000
+            Size.Height = 724.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            ItemAppearance.ItemHeight = 48
+            ItemAppearance.ItemEditHeight = 48
+            ItemAppearanceObjects.ItemObjects.Text.TextColor = claTeal
+            ItemAppearanceObjects.ItemObjects.Detail.TextColor = xFFFF7F7F
+            ItemAppearanceObjects.ItemObjects.TextButton.Text = 'match'
+            ItemAppearanceObjects.HeaderObjects.Text.TextColor = claBlack
+            CanSwipeDelete = False
+            OnButtonClick = lVmatchButtonClick
+          end
+          object aIndic: TAniIndicator
+            Align = Center
+          end
+        end
+      end
+    end
+    object tiCtCl: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tiCtCl'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object rectangle7: TRectangle
+        Align = MostTop
+        Fill.Color = claTeal
+        Size.Width = 50.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object sBtnCCback: TSpeedButton
+          Align = MostLeft
+          Images = iList36
+          ImageIndex = 5
+          Margins.Left = 22.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Bottom = 13.000000000000000000
+          Position.X = 22.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = sBtnCCbackClick
+        end
+        object btnCCkeyb: TButton
+          Align = MostRight
+          Images = iList36
+          ImageIndex = 6
+          Margins.Top = 6.000000000000000000
+          Margins.Right = 22.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = -8.000000000000000000
+          Position.Y = 6.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+        end
+        object layout16: TLayout
+          Align = Center
+          Size.Width = 190.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object sBtnCCok: TSpeedButton
+            Align = MostLeft
+            StyledSettings = [Family]
+            Size.Width = 90.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'OK'
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.Font.Style = [fsBold]
+            TextSettings.FontColor = claWhite
+            OnClick = sBtnCCokClick
+          end
+          object sBtnCCancel: TSpeedButton
+            Align = MostRight
+            StyledSettings = [Family]
+            Position.X = 90.000000000000000000
+            Size.Width = 100.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            Text = 'Cancel'
+            TextSettings.Font.Size = 20.000000000000000000
+            TextSettings.Font.Style = [fsBold]
+            TextSettings.FontColor = claWhite
+            OnClick = sBtnCCbackClick
+          end
+        end
+      end
+      object vertScrollBox2: TVertScrollBox
+        Align = Client
+        Padding.Left = 5.000000000000000000
+        Padding.Right = 5.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 50.000000000000000000
+        Viewport.Height = 0.000000000000000000
+        object mainLayout2: TLayout
+          Align = Client
+          Size.Width = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object lPeople: TLayout
+            Align = Client
+            Size.Width = 40.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object layout19: TLayout
+              Align = MostTop
+              Size.Width = 40.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object eImia: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 0
+                ReturnKeyType = Next
+                MaxLength = 20
+                Margins.Top = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Size.Width = 40.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'First name*'
+                OnKeyDown = eTnameKeyDown
+                OnExit = eTnameExit
+                object clearEditButton3: TClearEditButton
+                  CanFocus = False
+                  Cursor = crArrow
+                  Size.Width = 28.000000000000000000
+                  Size.Height = 20.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                end
+              end
+            end
+            object layout20: TLayout
+              Align = MostTop
+              Position.Y = 44.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object eFam: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 0
+                ReturnKeyType = Next
+                MaxLength = 25
+                Margins.Top = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Size.Width = 40.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Last name*'
+                OnKeyDown = eTnameKeyDown
+                OnExit = eTnameExit
+                object clearEditButton4: TClearEditButton
+                  CanFocus = False
+                  Cursor = crArrow
+                  Size.Width = 28.000000000000000000
+                  Size.Height = 20.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                end
+              end
+            end
+            object layout21: TLayout
+              Align = MostTop
+              Position.Y = 88.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 2
+              object eOtch: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 0
+                ReturnKeyType = Next
+                MaxLength = 20
+                Margins.Top = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Size.Width = 40.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Middle name'
+                OnKeyDown = eTnameKeyDown
+                object clearEditButton5: TClearEditButton
+                  CanFocus = False
+                  Cursor = crArrow
+                  Size.Width = 28.000000000000000000
+                  Size.Height = 20.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                end
+              end
+            end
+            object layout22: TLayout
+              Align = MostTop
+              Position.Y = 132.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 3
+              object deDR: TDateEdit
+                Date = 42370.000000000000000000
+                DateFormatKind = Long
+                Align = Client
+                Margins.Top = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Size.Width = 40.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+            object layout23: TLayout
+              Align = MostTop
+              Position.Y = 176.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 4
+              object layout26: TLayout
+                Align = Center
+                Size.Width = 200.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object rBman: TRadioButton
+                  Align = MostLeft
+                  GroupName = 'manWoman'
+                  IsChecked = True
+                  Size.Width = 100.000000000000000000
+                  Size.Height = 44.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  Text = 'man'
+                end
+                object rBwom: TRadioButton
+                  Align = MostLeft
+                  GroupName = 'manWoman'
+                  Position.X = 100.000000000000000000
+                  Size.Width = 100.000000000000000000
+                  Size.Height = 44.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 1
+                  Text = 'woman'
+                end
+              end
+            end
+            object layout24: TLayout
+              Align = MostTop
+              Position.Y = 220.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 5
+              object eRank: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 0
+                ReturnKeyType = Next
+                MaxLength = 20
+                Margins.Top = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Size.Width = 40.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Sports grade'
+                OnKeyDown = eTnameKeyDown
+                OnExit = eTnameExit
+                object clearEditButton6: TClearEditButton
+                  CanFocus = False
+                  Cursor = crArrow
+                  Size.Width = 28.000000000000000000
+                  Size.Height = 20.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                end
+              end
+            end
+            object layout25: TLayout
+              Align = MostTop
+              Position.Y = 264.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 6
+              object eCoach: TEdit
+                Touch.InteractiveGestures = [LongTap, DoubleTap]
+                Align = Client
+                TabOrder = 0
+                ReturnKeyType = Next
+                MaxLength = 50
+                Margins.Top = 10.000000000000000000
+                Margins.Bottom = 10.000000000000000000
+                Size.Width = 40.000000000000000000
+                Size.Height = 24.000000000000000000
+                Size.PlatformDefault = False
+                TextPrompt = 'Coach Full name'
+                KillFocusByReturn = True
+                OnKeyDown = eTnameKeyDown
+                object clearEditButton7: TClearEditButton
+                  CanFocus = False
+                  Cursor = crArrow
+                  Size.Width = 28.000000000000000000
+                  Size.Height = 20.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                end
+              end
+            end
+          end
+          object layout17: TLayout
+            Align = MostTop
+            Size.Width = 40.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object eCity: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 0
+              ReturnKeyType = Next
+              MaxLength = 30
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'City*'
+              OnKeyDown = eTnameKeyDown
+              OnExit = eTnameExit
+              object clearEditButton1: TClearEditButton
+                CanFocus = False
+                Cursor = crArrow
+                Size.Width = 28.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+          end
+          object layout18: TLayout
+            Align = MostTop
+            Position.Y = 44.000000000000000000
+            Size.Width = 40.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object eClub: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Client
+              TabOrder = 0
+              ReturnKeyType = Next
+              MaxLength = 30
+              Margins.Top = 10.000000000000000000
+              Margins.Bottom = 10.000000000000000000
+              Size.Width = 40.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TextPrompt = 'Participant*'
+              OnKeyDown = eTnameKeyDown
+              OnExit = eTnameExit
+              object clearEditButton2: TClearEditButton
+                CanFocus = False
+                Cursor = crArrow
+                Size.Width = 28.000000000000000000
+                Size.Height = 20.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+              end
+            end
+          end
+        end
+      end
+    end
+    object tiScore: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tiScore'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object rectangle8: TRectangle
+        Align = MostTop
+        Fill.Color = claTeal
+        Size.Width = 50.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object sBtnSback: TSpeedButton
+          Align = MostLeft
+          Images = iList36
+          ImageIndex = 5
+          Margins.Left = 22.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Bottom = 13.000000000000000000
+          Position.X = 22.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = sBtnSbackClick
+        end
+      end
+      object gridPanelLayout1: TGridPanelLayout
+        Align = MostTop
+        Position.Y = 50.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 140.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = lbl_1
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = lbl_2
+            Row = 0
+          end
+          item
+            Column = 0
+            Control = layout28
+            Row = 1
+          end
+          item
+            Column = 1
+            Control = layout29
+            Row = 1
+          end>
+        RowCollection = <
+          item
+            SizeStyle = Absolute
+            Value = 80.000000000000000000
+          end
+          item
+            SizeStyle = Absolute
+            Value = 60.000000000000000000
+          end
+          item
+            SizeStyle = Auto
+          end>
+        object lbl_1: TLabel
+          Align = Client
+          StyledSettings = [Family, Size]
+          Margins.Right = 4.000000000000000000
+          Size.Width = 21.000000000000000000
+          Size.Height = 80.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'listboxheaderlabel'
+          TextSettings.Font.Style = [fsBold]
+          TextSettings.FontColor = claTeal
+          TextSettings.HorzAlign = Trailing
+          TextSettings.VertAlign = Trailing
+          Text = 'lbl_1'
+        end
+        object lbl_2: TLabel
+          Align = Client
+          StyledSettings = [Family, Size]
+          Margins.Left = 4.000000000000000000
+          Size.Width = 21.000000000000000000
+          Size.Height = 80.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'listboxheaderlabel'
+          TextSettings.Font.Style = [fsBold]
+          TextSettings.FontColor = xFFFF7F7F
+          TextSettings.VertAlign = Trailing
+          Text = 'lbl_2'
+        end
+        object layout28: TLayout
+          Align = Client
+          Size.Width = 25.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object scor1: TNumberBox
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = MostRight
+            StyleLookup = 'numberboxstyle'
+            TabOrder = 0
+            Cursor = crIBeam
+            Max = 999.000000000000000000
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.HorzAlign = Center
+            Position.X = -39.000000000000000000
+            Position.Y = 12.000000000000000000
+            VertIncrement = 1.000000000000000000
+            Margins.Top = 12.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Margins.Bottom = 12.000000000000000000
+            Size.Width = 60.000000000000000000
+            Size.Height = 36.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+          end
+          object label6: TLabel
+            Align = MostRight
+            AutoSize = True
+            StyledSettings = [Family, Style]
+            Margins.Right = 10.000000000000000000
+            Position.X = -109.000000000000000000
+            Size.Width = 60.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claTeal
+            TextSettings.HorzAlign = Trailing
+            TextSettings.WordWrap = False
+            Text = 'SCORE'
+          end
+        end
+        object layout29: TLayout
+          Align = Client
+          Size.Width = 25.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object scor2: TNumberBox
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = MostLeft
+            StyleLookup = 'numberboxstyle'
+            TabOrder = 0
+            Cursor = crIBeam
+            Max = 999.000000000000000000
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.HorzAlign = Center
+            Position.X = 4.000000000000000000
+            Position.Y = 12.000000000000000000
+            VertIncrement = 1.000000000000000000
+            Margins.Left = 4.000000000000000000
+            Margins.Top = 12.000000000000000000
+            Margins.Bottom = 12.000000000000000000
+            Size.Width = 60.000000000000000000
+            Size.Height = 36.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+            KillFocusByReturn = True
+          end
+          object label7: TLabel
+            Align = MostLeft
+            AutoSize = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 10.000000000000000000
+            Position.X = 74.000000000000000000
+            Size.Width = 60.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = xFFFF7F7F
+            TextSettings.WordWrap = False
+            Text = 'SCORE'
+          end
+        end
+      end
+      object layout30: TLayout
+        Align = MostTop
+        Position.Y = 190.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object sBtnOK: TCornerButton
+          Tag = 1
+          Align = Center
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 180.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'OK'
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+          OnClick = sBtnOKClick
+        end
+      end
+      object gridPanelLayout2: TGridPanelLayout
+        Align = MostTop
+        Position.Y = 250.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = sBtnNot1
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = sBtnNot2
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            SizeStyle = Absolute
+            Value = 60.000000000000000000
+          end
+          item
+            SizeStyle = Auto
+          end>
+        object sBtnNot1: TCornerButton
+          Tag = 5
+          Align = MostRight
+          Margins.Top = 12.000000000000000000
+          Margins.Right = 4.000000000000000000
+          Margins.Bottom = 12.000000000000000000
+          Position.X = -139.000000000000000000
+          Position.Y = 12.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 160.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          Text = 'ABSENCE'
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+          OnClick = sBtnOKClick
+        end
+        object sBtnNot2: TCornerButton
+          Tag = 6
+          Align = MostLeft
+          Margins.Left = 4.000000000000000000
+          Margins.Top = 12.000000000000000000
+          Margins.Bottom = 12.000000000000000000
+          Position.X = 29.000000000000000000
+          Position.Y = 12.000000000000000000
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 160.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'ABSENCE'
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+          OnClick = sBtnOKClick
+        end
+      end
+      object layout31: TLayout
+        Align = MostTop
+        Position.Y = 310.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object sBtnDef: TCornerButton
+          Tag = 4
+          Align = Center
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 180.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'MUTUAL ABSENCE'
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+          OnClick = sBtnOKClick
+        end
+      end
+    end
+    object tiAbout: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tiAbout'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object rectangle9: TRectangle
+        Align = MostTop
+        Fill.Color = claTeal
+        Size.Width = 50.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object sBtnAback: TSpeedButton
+          Align = MostLeft
+          Images = iList36
+          ImageIndex = 5
+          Margins.Left = 22.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Bottom = 13.000000000000000000
+          Position.X = 22.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = sBtnTbackClick
+        end
+        object Label8: TLabel
+          Align = Center
+          AutoSize = True
+          StyledSettings = [Family, Size]
+          Margins.Right = 58.000000000000000000
+          Size.Width = 120.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Style = [fsBold]
+          TextSettings.FontColor = claWhite
+          TextSettings.WordWrap = False
+          Text = 'About CompeTTable'
+        end
+      end
+      object layout32: TLayout
+        Align = MostTop
+        Position.Y = 50.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object lblToDay: TLabel
+          Align = Center
+          AutoSize = True
+          Size.Width = 51.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'lblToDay'
+        end
+      end
+      object layout33: TLayout
+        Align = MostTop
+        Position.Y = 110.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object lblVer: TLabel
+          Align = Center
+          AutoSize = True
+          Size.Width = 35.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.WordWrap = False
+          Text = 'lblVer'
+        end
+      end
+      object layout34: TLayout
+        Align = MostTop
+        Position.Y = 170.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 4
+        object lblSite: TLabel
+          Align = Center
+          AutoSize = True
+          StyledSettings = [Family, Size]
+          HitTest = True
+          Size.Width = 95.000000000000000000
+          Size.Height = 16.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Style = [fsUnderline]
+          TextSettings.FontColor = claDodgerblue
+          TextSettings.WordWrap = False
+          Text = 'WWW.STOkrat.ru'
+          OnClick = lblSiteClick
+        end
+      end
+      object layout35: TLayout
+        Align = MostTop
+        Position.Y = 230.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        object rBeng: TRadioButton
+          Align = Center
+          GroupName = 'language'
+          IsChecked = True
+          Margins.Top = 2.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'english'
+        end
+      end
+      object layout36: TLayout
+        Align = MostTop
+        Position.Y = 260.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 30.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 5
+        object rBfra: TRadioButton
+          Align = Center
+          GroupName = 'language'
+          Margins.Bottom = 2.000000000000000000
+          Size.Width = 80.000000000000000000
+          Size.Height = 19.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'fran'#231'ais'
+        end
+      end
+    end
+    object tiDraw: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'tiDraw'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object rectangle10: TRectangle
+        Align = MostTop
+        Fill.Color = claTeal
+        Size.Width = 50.000000000000000000
+        Size.Height = 50.000000000000000000
+        Size.PlatformDefault = False
+        Stroke.Kind = None
+        object sBtnDrawBack: TSpeedButton
+          Align = MostLeft
+          Images = iList36
+          ImageIndex = 5
+          Margins.Left = 22.000000000000000000
+          Margins.Top = 1.000000000000000000
+          Margins.Bottom = 13.000000000000000000
+          Position.X = 22.000000000000000000
+          Position.Y = 1.000000000000000000
+          Size.Width = 36.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = sBtnSbackClick
+        end
+        object label9: TLabel
+          Align = Client
+          StyledSettings = [Family, Size]
+          Margins.Right = 48.000000000000000000
+          Size.Height = 50.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'listboxheaderlabel'
+          TextSettings.Font.Style = [fsBold]
+          TextSettings.FontColor = claWhite
+          TextSettings.HorzAlign = Center
+          TextSettings.WordWrap = False
+          Text = 'Overtime | Select the Winner'
+        end
+      end
+      object gridPanelLayout3: TGridPanelLayout
+        Align = MostTop
+        Position.Y = 50.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 140.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = lot_1
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = lot_2
+            Row = 0
+          end
+          item
+            Column = 0
+            Control = layout37
+            Row = 1
+          end
+          item
+            Column = 1
+            Control = layout38
+            Row = 1
+          end>
+        RowCollection = <
+          item
+            SizeStyle = Absolute
+            Value = 80.000000000000000000
+          end
+          item
+            SizeStyle = Absolute
+            Value = 60.000000000000000000
+          end
+          item
+            SizeStyle = Auto
+          end>
+        object lot_1: TLabel
+          Align = Client
+          StyledSettings = [Family, Size]
+          Margins.Right = 4.000000000000000000
+          Size.Width = 21.000000000000000000
+          Size.Height = 80.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'listboxheaderlabel'
+          TextSettings.Font.Style = [fsBold]
+          TextSettings.FontColor = claTeal
+          TextSettings.HorzAlign = Trailing
+          TextSettings.VertAlign = Trailing
+          Text = 'lot_1'
+        end
+        object lot_2: TLabel
+          Align = Client
+          StyledSettings = [Family, Size]
+          Margins.Left = 4.000000000000000000
+          Size.Width = 21.000000000000000000
+          Size.Height = 80.000000000000000000
+          Size.PlatformDefault = False
+          StyleLookup = 'listboxheaderlabel'
+          TextSettings.Font.Style = [fsBold]
+          TextSettings.FontColor = xFFFF7F7F
+          TextSettings.VertAlign = Trailing
+          Text = 'lot_2'
+        end
+        object layout37: TLayout
+          Align = Client
+          Size.Width = 25.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          object sot1: TNumberBox
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = MostRight
+            StyleLookup = 'numberboxstyle'
+            TabOrder = 0
+            Cursor = crIBeam
+            Max = 999.000000000000000000
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.HorzAlign = Center
+            Position.X = -39.000000000000000000
+            Position.Y = 12.000000000000000000
+            VertIncrement = 1.000000000000000000
+            Margins.Top = 12.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Margins.Bottom = 12.000000000000000000
+            Size.Width = 60.000000000000000000
+            Size.Height = 36.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+          end
+          object score1: TLabel
+            Align = MostRight
+            AutoSize = True
+            StyledSettings = [Family, Style]
+            Margins.Right = 10.000000000000000000
+            Position.X = -148.000000000000000000
+            Size.Width = 99.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = claTeal
+            TextSettings.HorzAlign = Trailing
+            TextSettings.WordWrap = False
+            Text = 'SCORE [???]'
+          end
+        end
+        object layout38: TLayout
+          Align = Client
+          Size.Width = 25.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 3
+          object sot2: TNumberBox
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = MostLeft
+            StyleLookup = 'numberboxstyle'
+            TabOrder = 0
+            Cursor = crIBeam
+            Max = 999.000000000000000000
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.HorzAlign = Center
+            Position.X = 4.000000000000000000
+            Position.Y = 12.000000000000000000
+            VertIncrement = 1.000000000000000000
+            Margins.Left = 4.000000000000000000
+            Margins.Top = 12.000000000000000000
+            Margins.Bottom = 12.000000000000000000
+            Size.Width = 60.000000000000000000
+            Size.Height = 36.000000000000000000
+            Size.PlatformDefault = False
+            StyledSettings = [Family, Style, FontColor]
+            KillFocusByReturn = True
+          end
+          object score2: TLabel
+            Align = MostLeft
+            AutoSize = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 10.000000000000000000
+            Position.X = 74.000000000000000000
+            Size.Width = 99.000000000000000000
+            Size.Height = 60.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            TextSettings.FontColor = xFFFF7F7F
+            TextSettings.WordWrap = False
+            Text = 'SCORE [???]'
+          end
+        end
+      end
+      object layout39: TLayout
+        Align = MostTop
+        Position.Y = 190.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        object sBtnDraw: TCornerButton
+          Tag = 7
+          Align = Center
+          Sides = [Top, Left, Bottom, Right]
+          Size.Width = 180.000000000000000000
+          Size.Height = 36.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'OK'
+          XRadius = 3.000000000000000000
+          YRadius = 3.000000000000000000
+          OnClick = sBtnDrawClick
+        end
+      end
+      object gridPanelLayout4: TGridPanelLayout
+        Align = MostTop
+        Position.Y = 250.000000000000000000
+        Size.Width = 50.000000000000000000
+        Size.Height = 60.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        ColumnCollection = <
+          item
+            Value = 50.000000000000000000
+          end
+          item
+            Value = 50.000000000000000000
+          end>
+        ControlCollection = <
+          item
+            Column = 0
+            Control = img1
+            Row = 0
+          end
+          item
+            Column = 1
+            Control = img2
+            Row = 0
+          end>
+        RowCollection = <
+          item
+            Value = 100.000000000000000000
+          end
+          item
+            SizeStyle = Auto
+          end>
+        object img1: TImage
+          MultiResBitmap.Height = 36
+          MultiResBitmap = <
+            item
+              Width = 140
+              Height = 36
+              PNG = {
+                89504E470D0A1A0A0000000D494844520000008C0000002408060000005B8FD2
+                BD000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                0D8949444154785EED9C797057D515C74FD8121689101697685099AA086E68C4
+                71894375263A2EA506C1AD58EA4C45470799C106A7B54CCB088551C7A163CBA0
+                15C40DC90854C70D048462288B689A4496200413018590040249587EFD7EEEEF
+                DDFC1EBF122C7F985F3BBEEFCCE5BD77EF39F7DC77CFF79E73EFFB65483361FA
+                F4E9B1AAAA2A6B6A6AE231428463909E9E6ED9D9D9F6E8A38FA6A5FD69EAD458
+                862A468C18619FD5D50522112224707966A6CD9D3BD71A1550D2C68F1F1F53B1
+                D5353576EB9B6F0622112224F0EEC89196DBB3A74D9B36CDDA1D3A74C8D6EEDD
+                1B912542AB801B7004AEB4A3A2593711229C089E238E301122FCB7880813E1A4
+                101126C24921224C8493426A0873F8B05963A3D9FEFDF1C23D75B198D9D1A3A6
+                ED78BC8ED2DC6C76E448BC8D6B58EFE0C1B82C32DC5377E04042C7F7431B1F25
+                BD0D0AF0B6D0D9B7CFACA121A18B2C3AE87F9F6EB25D64B1C977ADDDBBCD76ED
+                3AB650475B78FCF4515363F6EDB7FF2947DFC861D3DB4F115243185EDE4F908E
+                6BCE51DE215C79AEAD4D4C2A4E60B298581CEBF5FC84E35064A9A3DD3BCECBD3
+                1757E4E8C7837B9C417F7BF698D5D72764E8D78F035D88439F807122431D3AE8
+                7B5D6F97679C5E5D7D6CD9B1235E1F1E3F57EC7FF38D595555BC704FD9B933DE
+                3F6341364CDA14A0FD90214326F6BBFC727BB3BC3CA86A03304172445E66A6E5
+                9F7BAE756BDFDE2A214A870EF1B6801005E79D67CDAAAF494B13B5C56D264D13
+                DB5FF7C32FBAC8CEE9D1C3CA71388E924E414E8E5DA7B20E67F8BE245F70D659
+                D62CDD1A6F43F61C7000444346B69C2ECF1D3BC6FB543F8CB15F468655427074
+                298C076204A42F38E71CA75BA7FEDC582192A2435EF7EE96DFBFBF5D71C61976
+                85C6E04A7676FC7AF6D9D6AD7367AB845CBC9748E4FAE9D72F2177E69976C5E9
+                A7DBBAAFBF8EBFBFB7CF3D76DA1023070CB06D9F7D666963C78E8DDDF0E083F6
+                B3A2A2A0A90D8053147A5FB8FD761B73D75DB67AE346BB6ACE9CF8641086B76F
+                B7BCBE7D6DD9CC993665DE3C9BB07E7DDCC9846BADBAC9C38659E1E8D156AE95
+                3878F66C6B0C74CAA64EB50172FC43EA6BE6D6AD7614794D76D933CF58D7AE5D
+                EDC669D3AC828996A35C7F108A152CB9D8071FB8A1A13BABB2D29A20AD74E78C
+                1A65F9D75C63574F9C681538AA4B97F838211476BFFBCECA9E7D366EF7D5576D
+                D6B66D715D5DE73CF080DDA7776C0D1B146DAED2F8EB3576FBEAAB96312463B7
+                E6EBB7AFBF6E33B66C71F6DBC97E4C51A62DE3CC8282025BF6E28B294A49384B
+                2FBDA4B4D43DE69E7FBE65E044801395021EBCED36F778775E5EDC4100276915
+                0FCDCD758FABE4D01C4500171140B0EAD235A9BD712C76823492A3953AE3FEFB
+                E3298FC8424AA1F834132043C4EAADE26CD226C7F452245B3C6182F557A46949
+                77A405AFEBEDEA1D7A7942511744B2DD8A449B45CA0A916BB30AD72D225B8522
+                D899A79C92881E01362ADA20BF41643E207BBDF48E7F1D33C60AAFBEDA3A75EA
+                6419926D8F4E0A901AAB4C4E7ABA155554B8D503C65F7249DC09847321FFDA6B
+                DD35A74F1F1BA1B4E5DA70B63050611E942A959C8A13714E284CF3636A771567
+                2734B1432FBBCC16DC7B6F8234F40942CE6AD1C5D9417F20E7B4D36CC6DD77C7
+                49E2090742763B6B2CA7785D4A607B85A2C76F962EB5F14B96D8C38A2294C73E
+                FAC89E5FB7CE0E3216FA0C8D01D909CB96D99D6FBF6D5D274DB2D59A27903F70
+                A0F51199195F871F1561984CAD142243892613E42AA73B4768020B155D7AF5EC
+                E9EAC17D72B49B54955F2BE27491636A94F737B2B1040191BCE33AA8FF4EDE61
+                5C438EBF43D1693251CB3B0A8426FF185D5F020CBDF862FB58A9D08FC581F6A0
+                7F567D47AF435D50DFAC28B15ED16299D2D4E2CD9B6D9108B0542973BD52D236
+                36D544AD102AB5884A1465CA49558AA27F5BBCD8D50FD2BEE6B46EDD1C619C9D
+                14203556710884D175913652609036862EBA68D50FBBE9265757C9C941F8E985
+                17C61DACB69BB59F001B15D6815BA14CB88F16C9083994100F0AB5AF28BCF2CA
+                84D34FA41B38667B3096A15AE593AFBF3EAEDB9A1EA02D884287B431DFA68551
+                FBE59766944D9BECA0C8B0873E49C149A9F173116A7349495C56A969F40D37B8
+                FA6A11294B698F94D42EB408DA12A9210C2F4B085629FAFC735795D3AB97E59D
+                7AAAE529FDE40E1AE4EA262B2CEF5124E92C724D56FE46FE1A5297B05A1BDEA3
+                72CA7EC81290E9B80811E6B52FBEB04F8388F63B6D9C0B7CAA6B0DE8058459A3
+                95FEEADAB5EE1EC24DC689DF479800F78960B1E79FB7D8AC5916D3263EF6C61B
+                169B31C3563FF4907564BFC4E209A1EC91476C81F65B6CA6B7BDF492E55E7081
+                AB2FD63B13FD78EF2327B2FD0322B584514AAA505A2957A806F99A9811D75DE7
+                EEAB14AA4BB5A216B3CA84DB070F7664620308D62A5A1CD6CA6C214C6BC05640
+                984EB23961F972773AE92227CD7EF861CB231506A470083B22A4DB5E8E7AB9BC
+                DC5604FB89C76EB9C50A7064D00E38B9B420A4DB1AF84BB673B5A1768409C90E
+                D0D1FA0E918C93177B27F08616D67211E680D236EF7C281491DA12A9210C202D
+                71BA91B33EE1D82C0C55F4184EB8173E9663D8D8FD65D52AF73C2027C71E0F4E
+                4E253A5AD76AE21A45144718BF01FD1EE01272FF2FE6CFB74A9D52BAC861B3C7
+                8EB5FE8153406BEBD6EBFEEAFDF76D8DA294D31D37CEF2D88007CE3E46171252
+                847745B4D10B17DAA8050BECCEB7DEB202959145453671C58AF86987F107B2E0
+                13A52C8F898B16D9CFE7CEB5F9DAFBEC566ADBA91357AD52378B2515481D6198
+                640823E22C215F0B03B5B27AE998D928327C2A5210763F512A581D44993BD877
+                081B94D709CB0725C7B1F384A92184C35A9548EED0F1FCC69933ED80AEACE085
+                4F3E19171012EBFC58608F0289EF91B32BB58772A479FC71EBCA515A685557CE
+                AD972D1C8DD3ABF7EDB3ED8A9E942AFF853814619E5DB3C6AAF8F828DCA345B4
+                55D1B65CF63669CF836E83DE99B1A402A9258CDFC76CD860BB35293800942ADD
+                D469522004E966FECA95AEDE636575B55B610DB49F44683E229D66C9B30FA8D0
+                667394F6079086E8E5D12EB4D2C320DD10D120CC5772FC8D2FBC60BBE5EC9CBE
+                7D2DA7776F2743B448F38EC7A181530FC8D66245A5BF9796DA7245D355DA4B15
+                EB9DD769E35BCF473E481F4293F4A628751E54FD4FFAF4B13F0C1962655A245B
+                4522487748EF911ABAA49A30A425F2B78852A263A6C7875BB6B849718410A614
+                173BE7805A4DFE375AA5389E95E6088393215FE02CF61BEE3B45523D6480343C
+                F1B5B4480E1BF7DA6BAECDA3A3EA5B74195FA00B1158D5382A1DC2C971635E79
+                251EE1027452C46C395653021C966C1DBF0BF18EECD71435DDEF49FC46C5F8B1
+                43B40D00A1D728A24C5FBAD43DDFA62853A8233D68AF7150E2A36A7B24DE2A15
+                60A2208C42FAA220EDEC1431366A25410647086474945CA91C0E883E4C16ABDD
+                1DA97128934D5A089C942EA7537CDFBE9E4D2F5100C73BC74A6F86F60B53DE7B
+                CFB5830CD5E1B034F4F9FA1C3892EF331D557C5AA2BE48916E9C4E3D1EE862B7
+                4597B10BF9975E6A654F3C61654F3F6D653A2D953DF79C954D9A6473468EB476
+                6CE2BB7737E38B6F00FA677C4F29352D0C3E3B3C75EBADF64B6DB2F90ADD4576
+                7E5C5F7A3D703669A85B372BE2175A61B1A20B4420F4BA0883C3D4FE674D1E28
+                5768F69BDD2608C3C4410A1DC93D31702E93CE2924B99EEF172D47521C2A52FD
+                5E4EF930202C8E600577856C38936B504F9F4428B77F4057637B595163BAD207
+                A06F4A8B6E9062D9970DC8CE76A98F13902B3A9DE5EA14747E5696191F29B906
+                F0DF5820DFB077DEB1AF95B6F8B4F0C79B6FB633D4175F9319632A909A5FAB3D
+                78698A26FE882667BBC270894E2F3B1B1A6C57701A388473D45EAF6BBD42F8C7
+                2256ADF61DDF292DB19174CEC7795AD10DAA2B51042AD704EF521FB437AB6DBF
+                EE7DFDB792A9515AE3780A6DDAA9BDB36C172B65EC95CD528D61A764EA64BB51
+                0439A83EF84858A252AD7674F789AC10075D3EA27DA9FD17A7AE4DBA3276EC36
+                EABDEAD4CFBFD46FB15250B1D2DF3F948E5688609F5656DA2A3DFF53EFB24332
+                A457DEBF56FA6B15B5B668335C23FBF4432A44B65A6DA54A63DB1481B1CFF8DB
+                F2A494DA5FAB93C06A61D5F0BB10E19608B237700C934278A6BD87DA5975A42A
+                C84494C171900EA76729D2F02594154AFB1EF5417B0FD525D7A3CB46963A9C8E
+                0CF679862C10837D54A6ECF2832276D1E194E388AA369C892E3299D2E53D1833
+                6347B79BA2023F82D237E3F391832BBABCE71EF507B9F9AE82FD9E9265116087
+                B1A2411D6320553206E46983686D05FF6B756A234C00BFA1640298907DAC50DD
+                43161F78696F521D6DC830D92EBA4817075090219DE150175D244F14C1B9E17A
+                7491A50D70C561AC5A1C4EFF5ED79D8EB0AB3A7491C16EB22E27BA165DD9F3ED
+                C862CFEBD7A9E06C0809598824BE4FBFD14786F7749147F5E1F1D3860C36BD8D
+                B6C0FF5484F1A480381EE1BFF7486EF75F54C3EDB4F92B70845069AD3E3CD9E1
+                76FEA5CDDBF0D1005017261A88B724F44158D7EB275A13F07D7105C8248F1350
+                473F1EC77B871F1AA9FD7B9824F0E27EE27C094F4672BB7FF6F06DAC46A212C5
+                CBB5561F8697F3B25E8612D6E5FE78BA61FD645DA2069182E8985C68F363A21C
+                6F9CBE6F5F1F6E4B05FE270813E1FF071161229C141C617CAE8C10A135B4ECCB
+                3AEA183B3833D3DE3AC11F2B47F871036EC011B8923675EAD41837C3870FB735
+                C12FA411228471658F1E366FDE3CE3BFFB7067B52953A6C4F873412A22444806
+                01252B2BCB0A0B0BD3FE0D41FFAD4C63493E530000000049454E44AE426082}
+              FileName = 'D:\mobleTest\btnWin1.png'
+            end>
+          Align = MostRight
+          Margins.Right = 4.000000000000000000
+          Position.X = -119.000000000000000000
+          Size.Width = 140.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = img1Click
+        end
+        object img2: TImage
+          MultiResBitmap.Height = 36
+          MultiResBitmap = <
+            item
+              Width = 140
+              Height = 36
+              PNG = {
+                89504E470D0A1A0A0000000D494844520000008C0000002408060000005B8FD2
+                BD000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                0CF249444154785EED9A696C9C4512866BC6C7F81A3B3E73E040205C6139C291
+                606081202D2BC1722C482101964BFC02C40F9010207E80848258232110123F10
+                48081090041621569C62B9C4C2728BE54C0890E05C3E633B89E373F67D6ABE9E
+                7C76EC88488B07C4BC526B66AABBBAFBAB7ABBAAFAB313263CF0C00399B6B636
+                1B1C1CE46701058C432A95B2E6E666BBFEFAEB1389BFB7B666CA2458B66C9935
+                F6F646430A2860373A6A6A6CE5CA95B64B012571D34D3765D4ACB6BBDB8A9F7A
+                2A1A524001BB3172F1C5D6535767F7DC738F25878787ADBEA7A7409602A604DC
+                8023702589606868C83B0A28602A048E38610A28E0E7A2409802F60905C214B0
+                4F2810A6807D42514B4BCB1D7F3AEE382BFEEAAB48F4CB637074D4B6AB88EAD5
+                BD7E872AEF91B1314B241296541BCD64BC7FA7E4BB4646FC377DBC611CD6B8ED
+                92A3873EBF33EA1F42AEDF7D6AE866B2CBB89C7906340F6B00D6D0843E1F73B3
+                06F3D1F80E588FF1E80D489F75C0445DD6EA931E0DDD31C900E39175ECDC699B
+                B76FF7B695B66387B54BD63330E0FB620E3498A767D72EEF67EC16B5F8B8118D
+                0BF609B6986E8C1C7184BDFEE9A7F9214CBF1C8B0137F6F7BB517042AAB8D84A
+                9249377CA78C85D1303A282D2A7263418ACDD2D9D8D7E70EC670C5EAC3A8C129
+                83D2679E22B51DD13ACCC7BCC8988B4F7487E4A84EADBFA1B7D7D743977EF421
+                0A7A389DF97194CFAB4FF60B2970F226ED0747337F09BA6A108D3DAEE9EAB2EF
+                BABB7D7E9E7593D6601DF458BB54CFCC7C3CE7F7BAB67EABF1EB34BE4D63794E
+                E6DDA63E08C5FAC5D1FAF9204D204C5E52527070473A6D230B16D8AEDA5A1B8D
+                4E3164C268FFDDBAD53A67CDB21E39605806E3F462E87532EC7A7E4BAFF8C003
+                DD80CCB77EDB36EBDB6F3FCB48CEC9053882F1ED33675A9BE6EF900370267331
+                0227E3401CDB2B5D9351D8070E614E777479B96DA9AC74E2110D7351447BE812
+                997074DF9C39AE6B1515BBF723DDADD5D556BC70A1A54F38C11A4E3CD16646AD
+                69F1626B942CAD352128FB640FDBE7CEB58AE38FB7DA458BAC5E6366684CEA98
+                6372A4E7C08467CB178AA3CF690546E704CF39F9645B7CD145D6FFEDB756FCF8
+                E31E4588389CCA6139F96FB7DF6E3FAE5A6549319BD4431F27F7B00B2EB053AE
+                BEDA46DBDAACE8D1476D9B8884D1FF7CC515D6347FBE0D6AAED4F7DFDBB0C662
+                ECBF5C7EB955C8E96B5B5BDDE83889C6294717675CB66285EFCD75D7AFB78C64
+                ED22D8214B97DAE1A79C629FDD7187F56B8D94F4CA141942DA81C47FBCF24A5F
+                7748BAA5D235E932EF1F962FB796F3CEF37927C5E6CD66DA7F46E462AE1BEEBD
+                37EA188F41F5B73DF9A4D9BA751E5920B4230FE4C94B8421B463F4EE2FBEF0DF
+                E9C30EB3F2B2323744B74841F439EEDC73BD6FF69225565E52E2DF893E9CDE43
+                744A41D1860D6633665885FAD1F57421A474D24D0409A4C0AC35B367DB3C1187
+                A842AA2242781DA2DF71B8AE1AC44097FAA1521170E1ADB7DAB0F64894414E24
+                0A355458B734A60BF9F97428BD587BBB5947C7EED6D969A6E8644421D9233716
+                28BAFAF82D5B786366A99A1A9B7FCD35D678D249565A5AAA63AE731EAD39DDC8
+                0B61204B752A65C3DF7D67433A3D0E855E9C406D82138E3CF55417A79A9AAC44
+                A92744258831EBE083BDCF14894C4EC43921BF3B34370D27200FA66D38F6586B
+                BAF4D25C511DD2E03867693ED7D51E9937F4542A3DCEBAE412270BBAA188A666
+                19B7AE1C8A2E642DD3DA8E1F7E307BE30DB3D75F377BE925B3975F367BE515B3
+                8F3E526E1B76D262931C18FBE69B66CF3E6B4377DE6923B213283EF2483F08BE
+                4E987B9A91975531685A0F4D64E853EA70ECBF7FEE5672B4C278BAAE2E2B072A
+                CA39CD38EBD0D34FB7629CAA746111D92000C0C10E08109105C7E51C2AA4551B
+                546B0E74981302322E07BE473A9021DE973EFA686BBAEAAADC5E00E326AE8B6C
+                F78A82A284A79F1F7FF44332B276AD7FF708A2DA8B34390E921165BA1541FFFD
+                D34FB6E1B5D7B2F2E666B3AAAA2C61582B0FC80B61484995220BCEDCFAC92759
+                A10A40F23EE963D1996766652A041D2A6421127D0B544F3808EB40722F06A313
+                3F11E3220F0E12D22264850A4A9C4E349BAA1270D204C2447B491D7594A54F3B
+                CD7543013C19E8239D817ED534EB1465DEF8E61BFBC7D75FDB3FD7ACB18F54EB
+                742A2D9182498D818060AB6A95FF7CFEB93DA7F15FEA39EBCF3823DBC10121ED
+                118DC2334D33F242184E24750961B85305ADA3A1C176AA1E6954FA992BA73808
+                CB441285F9A40A645247B352974305AF177D224B20D3648030B908F0D9676651
+                44ABB9F0422B3BE8A0BD3A1DBD92A04BBD440A11AA44B81972E2DE74E909BD10
+                6CFEFDF7DB192A7097AD5E6D7F7DFA693BE1A187AC4175499D220687278ECAEB
+                AEB3A6CB2EB37355045FF1C8235673F8E1D90E451B8F2CAC3BC501F9A59137C2
+                E07C52D2880AC25EC2B3502AC31C2AE33A08CB9C289D4850A9EBE61CDD444A55
+                003A8816184D8421BD102926036BE508C3C97CEBAD6C7A1009E75E7BAD552B15
+                8E4B4931ECA1FBE59766A413A1FEECB3AD56FBE59D4E0EB13DA0978B6C5381D4
+                A282BA4A7B89CF53356F9E1D283B70F3AA52EDE480EC1B377A44F514F77B220C
+                201D41189CB5318A32F5AA116607C250E861C4F7DFF79F95071C608744372737
+                1C46E386A3CF50804E859CDB702027F4B9E7FC969294C316DF7083CDD4157E2A
+                E4AEB0005D0A5645A984748FB9F1469B2DA7E6881123CCB874C64BD1E79FCFAE
+                BB72A5D9AA5566CF3C63F6CE3BBE2752D238D22A65E5F0EAAB591D88AAD466BA
+                419A52F7EF8E309C28080371B6285F83B4D251229DCE9EA24D9BDC285D0AC35D
+                21CA2C5AE49F5EBFE01C1126A3B17B4B0DE3409DC058197C502921A31B59854E
+                F092DB6E8B06EC05E8D1B4EF8C9C3DAA3D1489342D224D19750588910BA2E58C
+                8B73B5963B1AA7F7F565A3274DDF790713A3A5D9071F64AFDC8014CC779E993A
+                0A5DECF3739FF9FF8CBC1186904D0D43EB5771B74B298853EB88DE3F4008DE9B
+                6C7AF7DDAC3C80FA0527908E20CDCF351E3A9046244DA8D8EC79F8611B93B3AA
+                14BD72889FF438588388A67ED77DF0411B91F3CA149D8A1A1BB36362BAF1A2D7
+                49A2A834A094B64EA965AD0EC8161D8201D5451D22032F04F700A9131B10FD5A
+                5A2CD3DE6E63BC46807481F87940DE08C38922BA50F0A595C377F0AE2240B704
+                370A0613FADE7BCF46395940CE7207D0AF93C61597700EF1720F83E3D4269563
+                689195BFE32414BD7A9E7822EA8C40DA8974B9FE1787A8C127BA34C94BE4B86D
+                8F3D6699688F0EC9D14797165C3A2042AC511AFD173725B5774594CF756DE6AD
+                75F8FB15D13607F64044E17D0C58B8D04CE9DAC133D0C2BEA619395BE603E478
+                DEC73456565A264A3B1E7209C1845D358C59575E6E6351B1E9D1076371DAD58F
+                D92A45B806A505C63A30BEBE534C8E93E3D0E078C9705252F38EBDF862B61F44
+                BA65FA64DD2A740073E02874F5590E9914E932BAF5E410D3AD2D2BB3F268DD72
+                397CFECD37DB92BBEEB2A5BA2D5D78DF7D76FA8A15367FF9726B5611DF5C5D6D
+                7348C501AC83EE871FDA58F4DA2171CE39965CB0207BAD669DDF2361484B4497
+                59BA5AD671650414BB9085D0ABD38B53678A5025329E8357E6908593AD28C349
+                AE9763E7E94A5E8AA1019F6A6572DA1E720C4D6A1242844B7EFC71B63005912E
+                4E992B47CE086932C8A328E3BADA7B926BFADB6F67C730374DBAFB8B08754157
+                64286A6EF6C2BD46755AB56E4129DDCE12BCB16E68B083EBEAECD0FAFAEC5810
+                C8A035922FBC907DA3ADB5ECACB37C2EFFCE5EF280BCFC7B438017866A90A288
+                930C1928EC78F742136992726E850C94C0C9441FEA97503C92FB25C779B5224D
+                12197F87C1C0517F9A79B959C4E5A4B5283AF97556EBFB559BBFF9F0371ED696
+                6EA5F656C41AA4071AF3A08B4CA4715DE62722A2C7AB007445E64AF555B016C5
+                3B8781F738BC3E20F5F2074A7EF32C8C11F12BC33C8CA718669D90EE181BBDFD
+                751B20E75045C49F0EE4F5FF61E2803049C22F2D22891B8B4F1985739408FDC1
+                58C1698A34381DC2243975E8E0F498BE9FC4B83CA6EBE03433864F1C8503235D
+                BF52532B4194B0375AD0054177C2BA4E2674F98D2E733026B4704B622F3C13E3
+                C31864EC23EC9FA8461FA4616CD803F269425EFF1F660FF0E018008363B0E894
+                BA1C67F089F190D31F8C29B97A778F41877E88159DDC709B1A270F0E4787161C
+                3B714C5817672167FD685D6F20E886313C43D0A58FDFF40582D0703CD1844FD6
+                64CE300F73D0F88E8CB9823C8C0FB6C9037E1D840118074370BA30208E0E8E09
+                C69FAC3F20F4E3201ADF914D268FEBF2C96FE6C431F1F9E3F2F89C715D1A4E45
+                6F325DF47076204A68FCC6F9CCCD381AFA9035C8C23C411EA25C20641EF0EB89
+                3093B580C9FA6801E17730302D3E6E32791C13C74EFC3D513F8EF8D8898DF181
+                B4387962431EE60CE3E3EBC4DB647D79C0AF27C214F09B40813005EC139C30F9
+                096E05FC961038922C2929B1CE9A1AEB3BFFFC48544001E30137E0085C49B4B6
+                B666F8B274E952ABE3AA57400113D05D5B6BAB57AFD6C52DFBB2D3EEBEFBEE4C
+                5757970B0A2860220828F5F5F576CB2DB724FE07105370707F12346900000000
+                49454E44AE426082}
+              FileName = 'D:\mobleTest\btnWin2.png'
+            end>
+          Align = MostLeft
+          Margins.Left = 4.000000000000000000
+          Position.X = 29.000000000000000000
+          Size.Width = 140.000000000000000000
+          Size.Height = 60.000000000000000000
+          Size.PlatformDefault = False
+          OnClick = img1Click
+        end
+      end
+    end
+  end
+  object StyleBook1: TStyleBook
+    Styles = <
+      item
+      end
+      item
+        Platform = 'AndroidL Light'
+        ResourcesBin = {
+          464D585F5354594C4520322E3501060B7242746E315374796C6531033E0F060B
+          7242746E325374796C653103390F005450463007544C61796F75740009537479
+          6C654E616D65060B7242746E315374796C65310A506F736974696F6E2E580500
+          0000000000808408400A506F736974696F6E2E590500000000000000B707400A
+          53697A652E57696474680500000000000000C805400B53697A652E4865696768
+          740500000000000000B004401453697A652E506C6174666F726D44656661756C
+          74080756697369626C6508085461624F7264657202000007544C61796F757400
+          05416C69676E070552696768740A506F736974696F6E2E580500000000000000
+          9C05400A53697A652E57696474680500000000000000B003400B53697A652E48
+          65696768740500000000000000B004401453697A652E506C6174666F726D4465
+          6661756C7408001154436865636B5374796C654F626A65637400095374796C65
+          4E616D65060A6261636B67726F756E6405416C69676E070643656E746572064C
+          6F636B6564090C536F757263654C6F6F6B75700617416E64726F69644C204C69
+          6768747374796C652E706E670A53697A652E57696474680500000000000000B0
+          03400B53697A652E4865696768740500000000000000B003401453697A652E50
+          6C6174666F726D44656661756C740808577261704D6F6465070643656E746572
+          0D416374697665547269676765720707436865636B65640A4163746976654C69
+          6E6B0E010F536F75726365526563742E4C6566740500000000000000AE06400E
+          536F75726365526563742E546F7005000000000000008C054010536F75726365
+          526563742E52696768740500000000000000C4064011536F7572636552656374
+          2E426F74746F6D0500000000000000B805400001055363616C65050000000000
+          0000C0FF3F0F536F75726365526563742E4C65667405000000000000008E0740
+          0E536F75726365526563742E546F700500000000000000D0054010536F757263
+          65526563742E526967687405000000000000809E074011536F75726365526563
+          742E426F74746F6D05000000000000008906400001055363616C650500000000
+          0000008000400F536F75726365526563742E4C6566740500000000000000AB07
+          400E536F75726365526563742E546F70050000000000000088064010536F7572
+          6365526563742E52696768740500000000000000C1074011536F757263655265
+          63742E426F74746F6D0500000000000000B406400001055363616C6505000000
+          00000000C000400F536F75726365526563742E4C65667405000000000000C094
+          08400E536F75726365526563742E546F700500000000000000D3064010536F75
+          726365526563742E52696768740500000000000040A5084011536F7572636552
+          6563742E426F74746F6D05000000000000808A074000000A536F757263654C69
+          6E6B0E010F536F75726365526563742E4C6566740500000000000000AE06400E
+          536F75726365526563742E546F700500000000000000B8044010536F75726365
+          526563742E52696768740500000000000000C4064011536F7572636552656374
+          2E426F74746F6D05000000000000008805400001055363616C65050000000000
+          0000C0FF3F0F536F75726365526563742E4C65667405000000000000008E0740
+          0E536F75726365526563742E546F70050000000000000080054010536F757263
+          65526563742E526967687405000000000000809E074011536F75726365526563
+          742E426F74746F6D0500000000000000C205400001055363616C650500000000
+          0000008000400F536F75726365526563742E4C6566740500000000000000AB07
+          400E536F75726365526563742E546F700500000000000000A6054010536F7572
+          6365526563742E52696768740500000000000000C1074011536F757263655265
+          63742E426F74746F6D0500000000000000FE05400001055363616C6505000000
+          00000000C000400F536F75726365526563742E4C656674050000000000000095
+          08400E536F75726365526563742E546F70050000000000000084064010536F75
+          726365526563742E52696768740500000000000080A5084011536F7572636552
+          6563742E426F74746F6D0500000000000000C60640000007486F744C696E6B0E
+          010F536F75726365526563742E4C6566740500000000000000AE06400E536F75
+          726365526563742E546F700500000000000000B8044010536F75726365526563
+          742E52696768740500000000000000C4064011536F75726365526563742E426F
+          74746F6D05000000000000008805400001055363616C650500000000000000C0
+          FF3F0F536F75726365526563742E4C65667405000000000000008E07400E536F
+          75726365526563742E546F70050000000000000080054010536F757263655265
+          63742E526967687405000000000000809E074011536F75726365526563742E42
+          6F74746F6D0500000000000000C205400001055363616C650500000000000000
+          8000400F536F75726365526563742E4C6566740500000000000000AB07400E53
+          6F75726365526563742E546F700500000000000000A6054010536F7572636552
+          6563742E52696768740500000000000000C1074011536F75726365526563742E
+          426F74746F6D0500000000000000FE05400001055363616C6505000000000000
+          00C000400F536F75726365526563742E4C65667405000000000000009508400E
+          536F75726365526563742E546F70050000000000000084064010536F75726365
+          526563742E52696768740500000000000080A5084011536F7572636552656374
+          2E426F74746F6D0500000000000000C6064000000D416374697665486F744C69
+          6E6B0E010F536F75726365526563742E4C6566740500000000000000AE06400E
+          536F75726365526563742E546F7005000000000000008C054010536F75726365
+          526563742E52696768740500000000000000C4064011536F7572636552656374
+          2E426F74746F6D0500000000000000B805400001055363616C65050000000000
+          0000C0FF3F0F536F75726365526563742E4C65667405000000000000008E0740
+          0E536F75726365526563742E546F700500000000000000D0054010536F757263
+          65526563742E526967687405000000000000809E074011536F75726365526563
+          742E426F74746F6D05000000000000008906400001055363616C650500000000
+          0000008000400F536F75726365526563742E4C6566740500000000000000AC07
+          400E536F75726365526563742E546F7005000000000000008A064010536F7572
+          6365526563742E52696768740500000000000000C0074011536F757263655265
+          63742E426F74746F6D0500000000000000B206400001055363616C6505000000
+          00000000C000400F536F75726365526563742E4C65667405000000000000C094
+          08400E536F75726365526563742E546F700500000000000000D3064010536F75
+          726365526563742E52696768740500000000000040A5084011536F7572636552
+          6563742E426F74746F6D05000000000000808A074000000B466F63757365644C
+          696E6B0E010F536F75726365526563742E4C6566740500000000000000AE0640
+          0E536F75726365526563742E546F700500000000000000B8044010536F757263
+          65526563742E52696768740500000000000000C4064011536F75726365526563
+          742E426F74746F6D05000000000000008805400001055363616C650500000000
+          000000C0FF3F0F536F75726365526563742E4C65667405000000000000008E07
+          400E536F75726365526563742E546F70050000000000000080054010536F7572
+          6365526563742E526967687405000000000000809E074011536F757263655265
+          63742E426F74746F6D0500000000000000C205400001055363616C6505000000
+          000000008000400F536F75726365526563742E4C6566740500000000000000AB
+          07400E536F75726365526563742E546F700500000000000000A6054010536F75
+          726365526563742E52696768740500000000000000C1074011536F7572636552
+          6563742E426F74746F6D0500000000000000FE05400001055363616C65050000
+          0000000000C000400F536F75726365526563742E4C6566740500000000000000
+          9508400E536F75726365526563742E546F70050000000000000084064010536F
+          75726365526563742E52696768740500000000000080A5084011536F75726365
+          526563742E426F74746F6D0500000000000000C6064000001141637469766546
+          6F63757365644C696E6B0E010F536F75726365526563742E4C65667405000000
+          00000000AE06400E536F75726365526563742E546F7005000000000000008C05
+          4010536F75726365526563742E52696768740500000000000000C4064011536F
+          75726365526563742E426F74746F6D0500000000000000B80540000105536361
+          6C650500000000000000C0FF3F0F536F75726365526563742E4C656674050000
+          00000000008E07400E536F75726365526563742E546F700500000000000000D0
+          054010536F75726365526563742E526967687405000000000000809E07401153
+          6F75726365526563742E426F74746F6D05000000000000008906400001055363
+          616C6505000000000000008000400F536F75726365526563742E4C6566740500
+          000000000000AB07400E536F75726365526563742E546F700500000000000000
+          88064010536F75726365526563742E52696768740500000000000000C1074011
+          536F75726365526563742E426F74746F6D0500000000000000B4064000010553
+          63616C650500000000000000C000400F536F75726365526563742E4C65667405
+          000000000000C09408400E536F75726365526563742E546F7005000000000000
+          00D3064010536F75726365526563742E52696768740500000000000040A50840
+          11536F75726365526563742E426F74746F6D05000000000000808A0740000000
+          00001654427574746F6E5374796C65546578744F626A65637400095374796C65
+          4E616D6506047465787405416C69676E0706436C69656E74064C6F636B656409
+          0D4D617267696E732E52696768740500000000000000C000400A53697A652E57
+          6964746805000000000000009605400B53697A652E4865696768740500000000
+          000000B004401453697A652E506C6174666F726D44656661756C740816546578
+          7453657474696E67732E466F6E742E53697A6505000000000000008003401654
+          65787453657474696E67732E466F6E74436F6C6F720709784646323232323232
+          0D536861646F7756697369626C650808486F74436F6C6F720709784646323232
+          3232320C466F6375736564436F6C6F7207097846463232323232320B4E6F726D
+          616C436F6C6F7207097846463232323232320C50726573736564436F6C6F7207
+          097846463232323232320000005450463007544C61796F757400095374796C65
+          4E616D65060B7242746E325374796C65310A506F736974696F6E2E5805000000
+          000000808408400A506F736974696F6E2E590500000000000000B707400A5369
+          7A652E57696474680500000000000000C805400B53697A652E48656967687405
+          00000000000000B004401453697A652E506C6174666F726D44656661756C7408
+          085461624F7264657202010007544C61796F75740005416C69676E07094D6F73
+          7452696768740A506F736974696F6E2E5805000000000000009C05400A53697A
+          652E57696474680500000000000000B003400B53697A652E4865696768740500
+          000000000000B004401453697A652E506C6174666F726D44656661756C740800
+          1154436865636B5374796C654F626A65637400095374796C654E616D65060A62
+          61636B67726F756E6405416C69676E070643656E746572064C6F636B6564090C
+          536F757263654C6F6F6B75700617416E64726F69644C204C696768747374796C
+          652E706E670A53697A652E57696474680500000000000000B003400B53697A65
+          2E4865696768740500000000000000B003401453697A652E506C6174666F726D
+          44656661756C740808577261704D6F6465070643656E7465720D416374697665
+          547269676765720707436865636B65640A4163746976654C696E6B0E010F536F
+          75726365526563742E4C6566740500000000000000AE06400E536F7572636552
+          6563742E546F7005000000000000008C054010536F75726365526563742E5269
+          6768740500000000000000C4064011536F75726365526563742E426F74746F6D
+          0500000000000000B805400001055363616C650500000000000000C0FF3F0F53
+          6F75726365526563742E4C65667405000000000000008E07400E536F75726365
+          526563742E546F700500000000000000D0054010536F75726365526563742E52
+          6967687405000000000000809E074011536F75726365526563742E426F74746F
+          6D05000000000000008906400001055363616C6505000000000000008000400F
+          536F75726365526563742E4C6566740500000000000000AB07400E536F757263
+          65526563742E546F70050000000000000088064010536F75726365526563742E
+          52696768740500000000000000C1074011536F75726365526563742E426F7474
+          6F6D0500000000000000B406400001055363616C650500000000000000C00040
+          0F536F75726365526563742E4C65667405000000000000C09408400E536F7572
+          6365526563742E546F700500000000000000D3064010536F7572636552656374
+          2E52696768740500000000000040A5084011536F75726365526563742E426F74
+          746F6D05000000000000808A074000000A536F757263654C696E6B0E010F536F
+          75726365526563742E4C6566740500000000000000AE06400E536F7572636552
+          6563742E546F700500000000000000B8044010536F75726365526563742E5269
+          6768740500000000000000C4064011536F75726365526563742E426F74746F6D
+          05000000000000008805400001055363616C650500000000000000C0FF3F0F53
+          6F75726365526563742E4C65667405000000000000008E07400E536F75726365
+          526563742E546F70050000000000000080054010536F75726365526563742E52
+          6967687405000000000000809E074011536F75726365526563742E426F74746F
+          6D0500000000000000C205400001055363616C6505000000000000008000400F
+          536F75726365526563742E4C6566740500000000000000AB07400E536F757263
+          65526563742E546F700500000000000000A6054010536F75726365526563742E
+          52696768740500000000000000C1074011536F75726365526563742E426F7474
+          6F6D0500000000000000FE05400001055363616C650500000000000000C00040
+          0F536F75726365526563742E4C65667405000000000000009508400E536F7572
+          6365526563742E546F70050000000000000084064010536F7572636552656374
+          2E52696768740500000000000080A5084011536F75726365526563742E426F74
+          746F6D0500000000000000C60640000007486F744C696E6B0E010F536F757263
+          65526563742E4C6566740500000000000000AE06400E536F7572636552656374
+          2E546F700500000000000000B8044010536F75726365526563742E5269676874
+          0500000000000000C4064011536F75726365526563742E426F74746F6D050000
+          00000000008805400001055363616C650500000000000000C0FF3F0F536F7572
+          6365526563742E4C65667405000000000000008E07400E536F75726365526563
+          742E546F70050000000000000080054010536F75726365526563742E52696768
+          7405000000000000809E074011536F75726365526563742E426F74746F6D0500
+          000000000000C205400001055363616C6505000000000000008000400F536F75
+          726365526563742E4C6566740500000000000000AB07400E536F757263655265
+          63742E546F700500000000000000A6054010536F75726365526563742E526967
+          68740500000000000000C1074011536F75726365526563742E426F74746F6D05
+          00000000000000FE05400001055363616C650500000000000000C000400F536F
+          75726365526563742E4C65667405000000000000009508400E536F7572636552
+          6563742E546F70050000000000000084064010536F75726365526563742E5269
+          6768740500000000000080A5084011536F75726365526563742E426F74746F6D
+          0500000000000000C6064000000D416374697665486F744C696E6B0E010F536F
+          75726365526563742E4C6566740500000000000000AE06400E536F7572636552
+          6563742E546F7005000000000000008C054010536F75726365526563742E5269
+          6768740500000000000000C4064011536F75726365526563742E426F74746F6D
+          0500000000000000B805400001055363616C650500000000000000C0FF3F0F53
+          6F75726365526563742E4C65667405000000000000008E07400E536F75726365
+          526563742E546F700500000000000000D0054010536F75726365526563742E52
+          6967687405000000000000809E074011536F75726365526563742E426F74746F
+          6D05000000000000008906400001055363616C6505000000000000008000400F
+          536F75726365526563742E4C6566740500000000000000AC07400E536F757263
+          65526563742E546F7005000000000000008A064010536F75726365526563742E
+          52696768740500000000000000C0074011536F75726365526563742E426F7474
+          6F6D0500000000000000B206400001055363616C650500000000000000C00040
+          0F536F75726365526563742E4C65667405000000000000C09408400E536F7572
+          6365526563742E546F700500000000000000D3064010536F7572636552656374
+          2E52696768740500000000000040A5084011536F75726365526563742E426F74
+          746F6D05000000000000808A074000000B466F63757365644C696E6B0E010F53
+          6F75726365526563742E4C6566740500000000000000AE06400E536F75726365
+          526563742E546F700500000000000000B8044010536F75726365526563742E52
+          696768740500000000000000C4064011536F75726365526563742E426F74746F
+          6D05000000000000008805400001055363616C650500000000000000C0FF3F0F
+          536F75726365526563742E4C65667405000000000000008E07400E536F757263
+          65526563742E546F70050000000000000080054010536F75726365526563742E
+          526967687405000000000000809E074011536F75726365526563742E426F7474
+          6F6D0500000000000000C205400001055363616C650500000000000000800040
+          0F536F75726365526563742E4C6566740500000000000000AB07400E536F7572
+          6365526563742E546F700500000000000000A6054010536F7572636552656374
+          2E52696768740500000000000000C1074011536F75726365526563742E426F74
+          746F6D0500000000000000FE05400001055363616C650500000000000000C000
+          400F536F75726365526563742E4C65667405000000000000009508400E536F75
+          726365526563742E546F70050000000000000084064010536F75726365526563
+          742E52696768740500000000000080A5084011536F75726365526563742E426F
+          74746F6D0500000000000000C60640000011416374697665466F63757365644C
+          696E6B0E010F536F75726365526563742E4C6566740500000000000000AE0640
+          0E536F75726365526563742E546F7005000000000000008C054010536F757263
+          65526563742E52696768740500000000000000C4064011536F75726365526563
+          742E426F74746F6D0500000000000000B805400001055363616C650500000000
+          000000C0FF3F0F536F75726365526563742E4C65667405000000000000008E07
+          400E536F75726365526563742E546F700500000000000000D0054010536F7572
+          6365526563742E526967687405000000000000809E074011536F757263655265
+          63742E426F74746F6D05000000000000008906400001055363616C6505000000
+          000000008000400F536F75726365526563742E4C6566740500000000000000AB
+          07400E536F75726365526563742E546F70050000000000000088064010536F75
+          726365526563742E52696768740500000000000000C1074011536F7572636552
+          6563742E426F74746F6D0500000000000000B406400001055363616C65050000
+          0000000000C000400F536F75726365526563742E4C65667405000000000000C0
+          9408400E536F75726365526563742E546F700500000000000000D3064010536F
+          75726365526563742E52696768740500000000000040A5084011536F75726365
+          526563742E426F74746F6D05000000000000808A074000000000001654427574
+          746F6E5374796C65546578744F626A65637400095374796C654E616D65060474
+          65787405416C69676E0706436C69656E74064C6F636B6564090D4D617267696E
+          732E52696768740500000000000000C000400A53697A652E5769647468050000
+          00000000009605400B53697A652E4865696768740500000000000000B0044014
+          53697A652E506C6174666F726D44656661756C7408165465787453657474696E
+          67732E466F6E742E53697A650500000000000000800340165465787453657474
+          696E67732E466F6E74436F6C6F7207097846463232323232320D536861646F77
+          56697369626C650808486F74436F6C6F7207097846463232323232320C466F63
+          75736564436F6C6F7207097846463232323232320B4E6F726D616C436F6C6F72
+          07097846463232323232320C50726573736564436F6C6F720709784646323232
+          323232000000}
+      end
+      item
+        Platform = 'Windows 7'
+        ResourcesBin = {
+          464D585F5354594C4520322E3501060B7242746E315374796C653103C705060B
+          7242746E325374796C653103BE05005450463007544C61796F75740009537479
+          6C654E616D65060B7242746E315374796C65310A506F736974696F6E2E580500
+          0000000000808408400A506F736974696F6E2E590500000000000000B707400A
+          53697A652E57696474680500000000000000C805400B53697A652E4865696768
+          740500000000000000B004401453697A652E506C6174666F726D44656661756C
+          74080756697369626C6508085461624F7264657202000007544C61796F757400
+          05416C69676E07044C6566740A53697A652E5769647468050000000000000090
+          03400B53697A652E4865696768740500000000000000B004401453697A652E50
+          6C6174666F726D44656661756C7408001154436865636B5374796C654F626A65
+          637400095374796C654E616D65060A6261636B67726F756E6405416C69676E07
+          0643656E746572064C6F636B6564090C536F757263654C6F6F6B757006125769
+          6E646F777320377374796C652E706E670A53697A652E57696474680500000000
+          000000C002400B53697A652E4865696768740500000000000000C00240145369
+          7A652E506C6174666F726D44656661756C740808577261704D6F646507064365
+          6E7465720D416374697665547269676765720707436865636B65640A41637469
+          76654C696E6B0E010F536F75726365526563742E4C6566740500000000000000
+          F803400E536F75726365526563742E546F700500000000000000FC054010536F
+          75726365526563742E52696768740500000000000000AC044011536F75726365
+          526563742E426F74746F6D05000000000000008A064000000A536F757263654C
+          696E6B0E010F536F75726365526563742E4C6566740500000000000000C00040
+          0E536F75726365526563742E546F700500000000000000FC054010536F757263
+          65526563742E52696768740500000000000000F0024011536F75726365526563
+          742E426F74746F6D05000000000000008A0640000007486F744C696E6B0E010F
+          536F75726365526563742E4C65667405000000000000008803400E536F757263
+          65526563742E546F700500000000000000FC054010536F75726365526563742E
+          52696768740500000000000000E8034011536F75726365526563742E426F7474
+          6F6D05000000000000008A064000000D416374697665486F744C696E6B0E010F
+          536F75726365526563742E4C6566740500000000000000B404400E536F757263
+          65526563742E546F700500000000000000FC054010536F75726365526563742E
+          52696768740500000000000000E4044011536F75726365526563742E426F7474
+          6F6D05000000000000008A064000000B466F63757365644C696E6B0E010F536F
+          75726365526563742E4C65667405000000000000008803400E536F7572636552
+          6563742E546F700500000000000000FC054010536F75726365526563742E5269
+          6768740500000000000000E8034011536F75726365526563742E426F74746F6D
+          05000000000000008A0640000011416374697665466F63757365644C696E6B0E
+          010F536F75726365526563742E4C6566740500000000000000B404400E536F75
+          726365526563742E546F700500000000000000FC054010536F75726365526563
+          742E52696768740500000000000000E4044011536F75726365526563742E426F
+          74746F6D05000000000000008A064000000000001654427574746F6E5374796C
+          65546578744F626A65637400095374796C654E616D6506047465787405416C69
+          676E0706436C69656E74064C6F636B6564090C4D617267696E732E4C65667405
+          00000000000000C000400A53697A652E576964746805000000000000009E0540
+          0B53697A652E4865696768740500000000000000B004401453697A652E506C61
+          74666F726D44656661756C74080D536861646F7756697369626C650808486F74
+          436F6C6F720708636C61426C61636B0C466F6375736564436F6C6F720708636C
+          61426C61636B0B4E6F726D616C436F6C6F720708636C61426C61636B0C507265
+          73736564436F6C6F720708636C61426C61636B0000005450463007544C61796F
+          757400095374796C654E616D65060B7242746E325374796C65310A506F736974
+          696F6E2E5805000000000000808408400A506F736974696F6E2E590500000000
+          000000B707400A53697A652E57696474680500000000000000C805400B53697A
+          652E4865696768740500000000000000B004401453697A652E506C6174666F72
+          6D44656661756C7408085461624F7264657202010007544C61796F7574000541
+          6C69676E07044C6566740A53697A652E57696474680500000000000000900340
+          0B53697A652E4865696768740500000000000000B004401453697A652E506C61
+          74666F726D44656661756C7408001154436865636B5374796C654F626A656374
+          00095374796C654E616D65060A6261636B67726F756E6405416C69676E070643
+          656E746572064C6F636B6564090C536F757263654C6F6F6B7570061257696E64
+          6F777320377374796C652E706E670A53697A652E576964746805000000000000
+          00C002400B53697A652E4865696768740500000000000000C002401453697A65
+          2E506C6174666F726D44656661756C740808577261704D6F6465070643656E74
+          65720D416374697665547269676765720707436865636B65640A416374697665
+          4C696E6B0E010F536F75726365526563742E4C6566740500000000000000F803
+          400E536F75726365526563742E546F700500000000000000FC054010536F7572
+          6365526563742E52696768740500000000000000AC044011536F757263655265
+          63742E426F74746F6D05000000000000008A064000000A536F757263654C696E
+          6B0E010F536F75726365526563742E4C6566740500000000000000C000400E53
+          6F75726365526563742E546F700500000000000000FC054010536F7572636552
+          6563742E52696768740500000000000000F0024011536F75726365526563742E
+          426F74746F6D05000000000000008A0640000007486F744C696E6B0E010F536F
+          75726365526563742E4C65667405000000000000008803400E536F7572636552
+          6563742E546F700500000000000000FC054010536F75726365526563742E5269
+          6768740500000000000000E8034011536F75726365526563742E426F74746F6D
+          05000000000000008A064000000D416374697665486F744C696E6B0E010F536F
+          75726365526563742E4C6566740500000000000000B404400E536F7572636552
+          6563742E546F700500000000000000FC054010536F75726365526563742E5269
+          6768740500000000000000E4044011536F75726365526563742E426F74746F6D
+          05000000000000008A064000000B466F63757365644C696E6B0E010F536F7572
+          6365526563742E4C65667405000000000000008803400E536F75726365526563
+          742E546F700500000000000000FC054010536F75726365526563742E52696768
+          740500000000000000E8034011536F75726365526563742E426F74746F6D0500
+          0000000000008A0640000011416374697665466F63757365644C696E6B0E010F
+          536F75726365526563742E4C6566740500000000000000B404400E536F757263
+          65526563742E546F700500000000000000FC054010536F75726365526563742E
+          52696768740500000000000000E4044011536F75726365526563742E426F7474
+          6F6D05000000000000008A064000000000001654427574746F6E5374796C6554
+          6578744F626A65637400095374796C654E616D6506047465787405416C69676E
+          0706436C69656E74064C6F636B6564090C4D617267696E732E4C656674050000
+          0000000000C000400A53697A652E576964746805000000000000009E05400B53
+          697A652E4865696768740500000000000000B004401453697A652E506C617466
+          6F726D44656661756C74080D536861646F7756697369626C650808486F74436F
+          6C6F720708636C61426C61636B0C466F6375736564436F6C6F720708636C6142
+          6C61636B0B4E6F726D616C436F6C6F720708636C61426C61636B0C5072657373
+          6564436F6C6F720708636C61426C61636B000000}
+      end>
+    Left = 584
+    Top = 368
+  end
+  object aList: TActionList
+    Left = 584
+    Top = 216
+    object chTAtour: TChangeTabAction
+      Category = 'Tab'
+      Tab = tiTour
+    end
+    object chTAtedit: TChangeTabAction
+      Category = 'Tab'
+      Tab = tiTedit
+    end
+    object chTAmain: TChangeTabAction
+      Category = 'Tab'
+      Tab = tiMain
+    end
+    object chTActcl: TChangeTabAction
+      Category = 'Tab'
+      Tab = tiCtCl
+    end
+    object chTAscore: TChangeTabAction
+      Category = 'Tab'
+      Tab = tiScore
+    end
+    object chTAbout: TChangeTabAction
+      Category = 'Tab'
+      Tab = tiAbout
+    end
+    object chTAdraw: TChangeTabAction
+      Category = 'Tab'
+      Tab = tiDraw
+    end
+  end
+  object iList36: TImageList
+    Source = <
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              02DC494441545847ED96BF4F535114C7BF2D48ABD1600017B096103520135131
+              35603468EAA0890ED2F007389910961675B0252E86264EDD1C1C411C3461D101
+              901F814862080941442518203010840144A1D67BEF3B85D7D7BE5B7ADF6330E1
+              939CDC734E5FFABE3DF79C7B8B03B2E0A035230906B9B6E260909B8692A0D753
+              5368ECE8A008E86A6AC2BDCA4A8AB22313E4A475CF18C57078CCF3769073851C
+              E13079E924DADAC893636B85F69BFF5F106FE04C98E573C5B629BB595181C8C0
+              009E4F4C68C9AD3F403C2EDCAE3B7753A650D6434A82F4FC585BC3E8E2221ABB
+              BB81F575CA1A60EF9F6D6981B7B090C27D1014EAE941747090221D794EFC0CB5
+              E2B8CB25C2E473C1FA7AB43734889C4C9052538B970C0D516420FE176FBFEC9E
+              49F76B6A005701A223C3F8BAB24259737216B42386152F76FB16E076D327BB74
+              4E7E260F3853548460ED25603B8E1763639435472A88F787D1F4621E9CBF005F
+              69293DBDCBFBEFDFB0B1BD4D115589ED5274F42365CC91F610229104442FB056
+              E213B3A5BD24298613EAED45944D9791CE400081AA2A8AB41FC7E18DADDE43BC
+              A7373799FDCE288653E7F19097CACBF171F234B890E494C99056687675356DCA
+              8C5F3AB9BC8CEA588C221DAC0809937B4FB942C95FA53723E74A4AC8B307A5B1
+              D7F36969893C1DBC00D9CFD48C5816343C37471E30DDDC2C4C60BE2B522C0B1A
+              5958D09C2387719A9D391EBEAD8AD5E15816F4667E5EACFE535E3121EEBC3C20
+              9F1913C52FE14C26435AD7BD5CAE0EFE2F913DD6EEF723E8F369B96854BB68DD
+              DA7D96C6A3C76A53968D7733333BDB73B5BC5CAC9C6775759AC3CFAF4C26C152
+              859EF4F7E3695F9FA844BCF5219CBA46965DA4678B8BF7A74283D43F574E7A52
+              C470F8A56A66322C09FAB0A009BAAEDB2EAB280B12FDB3F14BF8D7BC5EB1DA81
+              B2A09D03F1503E6ACBCA34DF069405BD9A9E16EB45D63F054E4B3B9F82E56FBA
+              61E376719405852FB343F0D851549FB0F7B6B7740EA922FB3F74801CE01F7B1A
+              1E38699F6E2B0000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoExit36.png'
+          end>
+        Name = 'icoExit36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              006D494441545847EDD6D10980201446616B3B476A82160ADC226A04273182FB
+              A0BDFC70439238DF8B82A007043100A8AC2995A73DE762CB2EB38DC320482148
+              214821C8653B0F7B77FBB2E31A5C994250577C3FBE409042904290325CD064A3
+              CBFD52DBB4B1C4F86A5FE04742B800C981980444358B9F0000000049454E44AE
+              426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoAdd36.png'
+          end>
+        Name = 'icoAdd36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              00B8494441545847EDD1510E83200CC671B2CBEF48C64B6C6FBEEB3D605B49BB
+              5406B887F1D525FD1943349AFE03C1B97F719DA607DDFC688B428479948E1166
+              51B518018F9281A788A241E9751D454182F4F05E143C46C4F419651623628ABB
+              A8FCC348D598C42BD35143F57646F398168F69F19816488C388A82EDCC6D5DDF
+              C35A5190184231A417058B213C33AB454163CA9D206554FE10458EAB44EFF993
+              9FBBF0FAB5FBB6857959F8094C76431F939991C7E29CB313C213970315AF46A4
+              AD490000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoRed36.png'
+          end>
+        Name = 'icoRed36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              00AA494441545847ED91510A85300C048B97F7483D9E52E8FE941A936C531432
+              3F4FF0ED64C09224C957386BBDFAA319663BA5091B1E31B39D0221B08899ED94
+              51083462663BE549082431B315F188C36280E540780CD01CDA1603DE0E4A2C8F
+              019EA8B01860890A8F019A286FCCD17FFFCBA73E99250684457962C0F2A8B798
+              F65EF39FAEE3B01C0A8FF21C088B62C4DBA33442662B328A2D42662B02B147C8
+              6C4518E1F2982449DC9472031655673791AA9FBA0000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoDel36.png'
+          end>
+        Name = 'icoDel36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              01E4494441545847ED96314EC33014869D2CDCA25D3A75834B7034EEC2052A86
+              5E01C4D281AD55D7EE0C49207FF02FBD3EFC5E1CA74254EA2759B66BFBF71FFB
+              D96EB8716D54312FE275BFFF8AC5331E96CB59BAC5C090C632B95AADEE62D1A5
+              8EB98B3509E83DC492CFF376FB198B2EA38660E67EB1704D8D71098D010848B4
+              A06E07637D747B3614EABA6EC80905F54492B13E6CCFC69B0C063F4EA758FB0D
+              3FC0EAD3B6ED905FD4D4146800E49871EF0B0C44306A7ACD505555783B1CC2CB
+              6E177FFDE171BD0EA931046366DD533025E3885BF6B4D9985F8936BD65183779
+              9B2CA4F89819A24DA11C9BE621630931906386A0AF246785CEF6323540C643C9
+              FE43536B684C4DB91A12C6D094D5217A95347A11DCA7A3EF1F4B21F4A662693E
+              D095DA12D7108E36075A022540172945D210BF8009D475D61F83D96405358DBD
+              1F8F7F1BD42918E825815D72ECB3C0A50643B887FED5C548C64CD18C7C5841CE
+              0AB97BC7FDC7919741CDBAF7B8F6F30F757D9A8A1F57AE4CEAEF03419DA9699A
+              21E7D6B21D7524C9E4584A9901ACCBD82068438231C03E34A529362581308564
+              3BCD7062DD67F60A112DA88550471BCD6075527D80A531190AA684F01B2692C9
+              EA6769146109D190C4EB1B8B2E590F94774CAD4752937BD4A7DF0702EBAB8BEE
+              991BD74908DFB38DD8EBFA764AB50000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoOpt36.png'
+          end>
+        Name = 'icoOpt36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              008C494441545847EDD7D109802010C6716B04776818476A82A6E9D91D1CA166
+              D0158A1305C18E7C28CEE8FB41684FFD39834801C085CDFB83AE742B8B42B2C5
+              5AD9A832467C4288E120868318CEEF6386B4562860D23AEEF710D4EA5CDC3F65
+              36867D76A59CCC5BB8CFCC98D66E7CE3C8328997FA16A25A21AA15A25A21AA55
+              1925FE1B945154371302E88B52270D5CBB01164A83450000000049454E44AE42
+              6082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoBack36.png'
+          end>
+        Name = 'icoBack36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              00E7494441545847EDD6D11182300C06E0E20830838EC00CF0EC323A816E04B3
+              E80CB08236DE5FAE9C25102D96F3F2BDD016DA8686024629A5AC4BD33CD64673
+              60BA910CC711EA706D5BD4D671AA2A9359A8F2B83B88E1D675344570FC1D8E93
+              5E3DAD9865CE6C40E4DEF728C52B8BD09D68CA405346B894B1EFA1735DBF9DA7
+              C1505CE45014C131F679FEFD7B88DAA442E3445D21692AA756796A85D8808E65
+              8996F84429FB243552D29556FF038FC06CFE7199F83959F4E9F0B91F376E3277
+              6EED9FBC81BF0BD13440F3EF7751282854D36D693F282759308E1F54F2601C0A
+              6433C128B52DC63C01A30C6E2B08E25BBD0000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoKeyb36.png'
+          end>
+        Name = 'icoKeyb36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0160494441545847ED963F6EC23014875FDBA537E1081C01187A894ACC2D5B7B
+              8276A9DA9D032075426280858DA55B37049558CA841424462AC7AE7FE819A551
+              AC388945A3904FB2CC731CFBC37F433595E4693C569A6B0EFF179651CB2050EF
+              F3B942DCECF7153F3E3D46280E04C3309C9E5CD026140782D3D5AAF0085E706E
+              051D3CB4DB1CB9F3B5DDD2F76E47A3C5E210DF341A14ECF7F4329BD147B79BDA
+              AF15D7117205ED71D3895C725E1A6AA1346AA134CE5B0867D370BDE62899CC42
+              68349A5C41DDCFCDA6D8A108CCC1885C4AD9D43FAFF811E18A9052DCE1D2C5D5
+              61C35CCCFC5A31A2425C9408E45A83819242DC8A1FD1BBD7F59150C655FCE02A
+              E40BEF8BDA8C0C8799F12A049157FD65809457EABCCF2117AA256416B0495C7C
+              24ED792E6CDB1E1D64C545AA7453E6FC91FF3C99D063A7F3A77ED23FC696073D
+              5D3FCE5BECFD5C6439A9A3D39877CDD4DBDE0B2ED3057C4C997720521A990A42
+              F40B4F6BEFD2CB27A9D80000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoFadd36.png'
+          end>
+        Name = 'icoFadd36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0190494441545847ED97BB6A024114864F92262F6161A38F60912E162B84BC44
+              D03AB726E40192CA27F00184548110D4625359245D3A71035AC44A58C1D2B017
+              F75FCE80C85E46667623C97EB08C67669CFD38EC9EA354F02779ECF5FC80630E
+              7F1796F12DDBF69F46231F71ADD3F179397F84D03610745DD7CC5D304E681B08
+              9A938972060F788C0537B86B343892E76BB1A0EFE5925EC6E3303EAF56C95EAD
+              A83D1CD247AB957ADF586433240BCEE3A32339E4716F2884D22884D2F8DF42A8
+              4DCFB31947D1EC2C8443372F59B0F7733E572B8A4014468C9EE7D5828F47BC44
+              68119EE75CA2E9A275C4211A337F4D8D4D219E8A047246B7EB7B8E73E1FC38D7
+              57C17E5C98E32D7A9015D245E60F3532B74BF7CF5408220FF53ABD379B849F26
+              3C9D48664242E6D5B2C2F8B45C0EE7C220814C84840C24DA8641B78301BD4DA7
+              BC9A8C76A14D19C159A542F7A6295583B40A45C92033B232409B900E19A04548
+              970C5016D2290394842073522A699301CA1912AF3550959122A997A1FA0A6EFA
+              FDFCFEC1C6355688400A22B9C914EC17446B855FDBE1499B03CD000000004945
+              4E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoFred36.png'
+          end>
+        Name = 'icoFred36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0185494441545847ED963F4EC33014871FB0708D4E3D42773AD0854B20750636
+              C40160E2043D40252624864E61EAC2C65615A476A053A554EA5894D8E4573D23
+              CB8AFF804341219F14A57E7E8D3F397E76A8A196DC8C46B2E0909BBF0BCBC897
+              349577938944BB331848EEDE3D4AC80482799E273B17B40999403099CDA26770
+              8FEF5630C065AFC7AD705E572B7A5BAFE9613ADDB64FDA6D4A371BBA1D8FE9A9
+              DFF78E6B25748642C1F3F8D1A5ECF3FDCFD008F968847CFC6F21EC4DF78B05B7
+              CAF9B2101EAA5FA120F779B98CDB1481DA18711742748A9F07DC45382284C8CE
+              70E8E2E8B0A10E66FE5B1CBA10874A81DCF1702845969D66EFD9C579918F0B31
+              4EA98650A1AAA8579561E6F0C9E1FADC401F7200879C44093DCEE774D46AD175
+              B7BB1D98C39F20863EE420378428A1AB24B14A9932C8AD04DFA2D65F897A7D65
+              314E8F27A4CA4C811F93012142409702DF95A957D92B3013FA02F6559F8B6821
+              5306D5E4AABE685C6B0803D916B0AB2F0A97906F40538AC3F1D82ACC25A3D0A5
+              38D45027883E001F566F868A42FA030000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoFdel36.png'
+          end>
+        Name = 'icoFdel36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0239494441545847ED96BD4E024110C70F6948482C8909B1B130C6179017B0D0
+              C6C2DE8F82DED7A0D29EC2F8001434264A8D1FA50D31161422896805161E8287
+              FCF7666059EE63EF8E030A7FC96677E76667FEBBB37760FC1327BB975783F3FB
+              FBC16BBB2D1AC6B0D1E3F9C262541622CA4D0C3377515E6218F8907BFCE0BEF8
+              011F728F1794429730655BA17E69583A41A188F35227A80F0C92D2D091C4101A
+              062274C92E1E1E68348DD7B358712A5DD4EF4FA44B7DFDFC42A3314EB6208416
+              E4F58D99EBCF0692E9BE65B10AD315A23273616185A84416A62B84FF9C71F3C3
+              4F98E3A5C682FDAD4DE32C97230B988CD1EBF51A96655D7C7EB4F72AD56AA652
+              7DCA18A6B9071B9E91DB148889D8DAA7B5532C8A5D4CEED6A2DEA6DFEFDFD59B
+              EF07B44404971398A679001F729F02B19103B968C908D7D77E7D75954660FC2B
+              80DDB75AADC24676AD8C3984DC9E1C19682C2A954A95FBDD6E413EA98174C293
+              B12709FC1D4A2693A56C362BC478914AA7CBF0B56783E196F42AE42A48DE914C
+              BDDEBC41AF968991EDD6CFB7F0B54F789CCA2DB623F21DB2F8EE58BF763F043E
+              48E8078BA2E908C40C74871EF3F9047E8F4AB59AF1D6F9B28D89C09575053111
+              1B39908BCCFE6087D36FDB78E7E8B931B28D7D64F864F87960B0501585393D16
+              C849D544F06574C578D6A2727A3C2A5FA3D311B6C3ED6D21424C3C800F7C01D6
+              7299105318A380E0F249A1974561ACCE655F9D93090C02AAA2D4443A3E33454D
+              0830961B8371AC621827512A51C484BA60BA89667281178B61FC013C3E920461
+              D495550000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoMadd36.png'
+          end>
+        Name = 'icoMadd36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              023A494441545847ED97BF4BC34014C7AF1607411C45280A0A8AFF816E82E2A0
+              8B7F8208BA3BFB07084E76771017374117514ADDAA75741387086AC5EA541D4C
+              6D49EC377DAFBDA497F69234B5831F38EEF5EEDD7BDFFB9534E29F38593E3CB2
+              F76F6EECA752C929B0D146DDBD85C578F913517E62989E8B6A2786810FB9C70F
+              CE4B27E043EEF182ADD025CCB60D50DD37F49DA050C479A81354070649C95492
+              A8416620426F593A9F27AB95767DB1A2DABAA8CF9F4887FAFCFE81AC26AAB620
+              8416D4EE19D3D3D70692E9DEB25885E90AF1D27561618578892C4C5708FF39E3
+              D2894EC294871A03566767C4F6FC3CB500778C4AA5F26C5956FAE3BDB492C9E5
+              4633B9BB51619A2B68431FB9B5809888ADBD5A730707CE2CDCB3B5A8AE53AD56
+              AF8DC2DB1A0D6980B128A669AEC187DC5B406CE4802F0D6DE07BEDC74746C802
+              CDB700665F2C16F7A6526367D4E480E0BB4B4B22BFB92972AFAFA7D572794F5E
+              295B5A61776C37819F43C964F224954A29C5308B939362E1F8F814BEF516BB36
+              25BD1DF21524CF48C6300A97643AB0188840B97A7C740AB07EBEC9172BDC4CE5
+              171BF80A7AF9FC6A0EB4AD7A5D637A7AE2824C9718999D6C56DC6E6D25068786
+              1BBE0C62227620F8CAABAE31B93862B28641AD75F01BEDE4E2405D0DF8406BDF
+              32C64F14074262199518F8CA8416C3A844E137FAE4D5518901F065228B61BCA2
+              50F3CC59884A0C7CE4315D11C3F889A2EE166215C3A8447913E9F874156F4200
+              5B2E0CEC58C5302A515EA28809F5A9A29B28B3B11EFA33AB4F10E217FEC79BB9
+              3FCC6D7C0000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoMred36.png'
+          end>
+        Name = 'icoMred36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0249494441545847ED973B4BC35014C7138B50A9388A50141414BF812E22080E
+              BAF423884377473F829D7477103F804317518A82487D8C2E451C22F800AB5375
+              30DA92D87F7A8EB9B949DA3C9AAAE00F2EF778EEB9E7FCEF234955FE4992C59D
+              5D73F3FCDCBCABD5AC061B3E1AEE2D2C46E64744F989617A2EAA9D180631149E
+              3CB82F9D400C85270B8E2228518EAD8FFA5FC3AF131489242FB54A7D6850944C
+              4FD426648622F2916D5D5C90E5A6DD58A2781D5DDCF74FAC4BBD7F7D43968D97
+              2F0C9105B57BC7F4F4B38162419FB24485051522D375615185C8C416165408FF
+              38E3D6894EC23C2F35262C4F4F296BB3B3E401CE1CF57AFDDE308CAD97E7DA52
+              A95C1E2E95AF86155D5F820F6314E60239913BF06ECD6C6F5BAB70AED6A0BE45
+              A3D138D31E9F7234C585AEEB39C450B80BE4460DD4A229DFF83EF6A343436401
+              FB2B80D557ABD5C24476A478A4698EED870D5F3A9D2E363E3E0AE24E99C20E3B
+              733B09FD1E4AA5527BD96CD612B3303EAEACCFCF5942D060C36789CA648A886D
+              CD329B4B0A7642BE82C4158968DAE321FA8D9353E5F8F6D61200212C063E8C01
+              E3F3DD8A6DEDB05DCA2F37F015F4F0FA664F348D56DF647272EC007D69754515
+              458962308698FE81412B56043991DB0F97A0CB7C5EC5F768AF52B127AAA14FD6
+              17E4446ED4402D72770677C2FDB4D9BF93F90203F4A22DC688F0D3C5E3A1C144
+              5914FEC6982C004DF42106B14C6C318C2C0A3D27157703B028B6C5395D11C320
+              919F282F1215C37889920B0589E92A7241005B6C0CEC44C5305EA264E28889F4
+              AF4AD042FC82FCC328CA17B5D584A07BA6E9530000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoMdel36.png'
+          end>
+        Name = 'icoMdel36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              00DE494441545847ED93EB0DC3200C844937C92A1DBCAB6494366ECF12360F93
+              0A4B44F2F7271738C092CF29B81B1BBE5FDE279082ED0452E0E12F0A7A1D07FE
+              7E3CF7BDFB80DEABAD3123FE07BECB10055914FD8414E8BE331EFEEA418DC7C3
+              2D860BF29CBE9C08B5C5DA53D682FA0F296865E2AA3FA7081EA460D6C323FEA2
+              207D596D8DA1BDD9D317A1B6587BCAA89F9002DD77C6C35F3DA8F178B8C57041
+              FAB2DA1A437B57A62F27426DB1F694B5A04C400A7A1982148C644818BC1F1EF1
+              1705E9CB6A6BCC3F7E6BFA22D4166B4F19F51852D0CB04A460963FB801297D00
+              2C6CCB2EFBC919D00000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoTable36.png'
+          end>
+        Name = 'icoTable36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              01C0494441545847ED964F52C23014C669F933B0C423E011B8020C5CA01E41F7
+              BAD023E042F77004B9000C1E418FA047D0259D2950BF2F099D3634D2961674E8
+              6F2693E425A45F5FDE7BA5527296F8BEFF8246AE952933B6EA330101DDF57ABD
+              C0D091961302311DE113B05C2EBFD4F0B41EDA6C36AFE8FA8D46E35D5A0E27B3
+              20CBB23EABD56A1F3D45E5C6411E2A02A320C6830C8B0066525B2D1746AC203C
+              B8876E2C67010E6266A4C6C7050FBEA74B3CCFFB08CF558A9F16E868A3BD5110
+              8529736158AA8F051A1CD775C7CD6693B1F3888C7A902B92DBD9CC57C308CFC3
+              61E45C9CC3FA1484005E6C820CBD51D36484AF0D1D632A02C598080BC5B427AD
+              514CDE360635BC2102B856AB75D02D78C836A6D2C03A85160021A26E61F82D36
+              6898D2FEE04F401C7C29DBB6E96D56F6A9306AC40A82FA2BF13A1AF57AFD526D
+              C904CF8026C661174D2F2B026361CC0B0818D1337AC958AD5614B58331CBF665
+              10D79F060361D3B99BCF837DD0C218DC89BD549996248392ECD9029313FA8B42
+              6FC55E1729FCCA084267DA6AB52E1843E437CF1C45501A0A17C4EB8B6B6A3919
+              FC8189ED6179EDD139BF2B4B4B29681FA5A07DFC3941993FAE24AF3D25FF984A
+              E5074B7BD0949EDDD7C40000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoPls36.png'
+          end>
+        Name = 'icoPls36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0093494441545847ED95C10AC0200C4375ECC3FDF3CD6EEEB269331425873C10
+              EA213660A331A474841629C5527D99A4DB4BD947ADB1D7F0C1D16DD786081942
+              D019A24B595B68AC369B997765D6F8BD7EA0A146C810822E6574EFD0FDDBD70E
+              F084A338FD34D4081942D0A5AC2D34569BCDE02BB303DE6B221A6A840C21E852
+              46F70E8DFDF6BD3A070D3542861074292B150B219C1B6D6A4DC91A3DA5000000
+              0049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\table36.png'
+          end>
+        Name = 'table36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0159494441545847ED91D1AEC3300843BBFFFFE8DD7982C8B192E12C6D751F76
+              5E82C0184A8F1F058F788FE78B083B1E2F22BC856E211DAE4BDEB19C7D21D439
+              C6AB647D07DB4097D0E155DDA535A96192C6A8738C571969BF6634043926D225
+              2B5AC5BED00AF0CABE55DFBDB34ED02574F8A77A0B5494A89903BCB2AFF2656D
+              C7A8113926D2253B5AFB42A8738C5719692B546B35013446F8460756F519E863
+              6D0BD43049313756DA15D8B76334043926D2A7A2BEF685AE027379C6A5C31CF8
+              10577FBC052F04FEDD2F6B8C16428E89F4A9A8AF7D21D439C6AB647D05F605B6
+              812EA1C3ABFA0CF4B1B6056A98A4981B57B415532D0A11369063225DB2A36D9B
+              CD4CDC2F65E0957D952F6BC1F230075D8207824FF516A8285133077865DFD7BE
+              A346E4984897AC6815FB42A8738C57196957B19B74091D58D55D5A931A26698C
+              3AC77895ACEFD02DA4863AF88C8115DD421176DCB1C40F9FE3F803EF7BB78D87
+              D2FBD10000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoOlimp36.png'
+          end>
+        Name = 'icoOlimp36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              012E494441545847ED95DB0E83300C433B691FDE3FDF4501927A813894321E38
+              5205529DC43193566E021ED3B3945A5FD35B4BADAA3981D6100E47932798E313
+              B28607A6C93788D23A284D2D3A3221ABDD8D37441AEB61C968013EA10CB20097
+              26D019EB0A6802876FDCABF05F09596D835728623D2C1DDAE7F414BC46DEA66B
+              03F7A409F00DD0040E8FEED7F8D619AD16455BDBC2489B010C29DE1011EB1901
+              F4E5131A852CBBCC183B8CC106317A798AAB7F32C53324E28BFEA8C594BE7BEC
+              49D3F6FDC0374013383CBA5F030CE95F07B3F5FC2E4D7EF5F6BE1B7F800C9E0F
+              4B87D66EEF3761A3B7C802DB69B5692F33F2C318D0042EB571AFC268930C76EB
+              DD7DBD4269AC8725A305F884C414B7B5D526E18BD0040E8CEE49B428B375A4ED
+              A0353468EB0CAD218F134CDCF094F206279E18069C25AA7D0000000049454E44
+              AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\olimp36.png'
+          end>
+        Name = 'olimp36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              02DF494441545847ED963D481C41188667538945106D034654B0B1122C8418B8
+              D23442421A094961241024A99454B1136C258D180D049180E2355103E60E0C48
+              1A497387012F77110F84055D0D41AFBAC9BCE37C7B73B7BFB7DB18D80786FDE6
+              FB997B677666F6D87FC5FDE565FEE3E484EBA00FBF4AF1244EAD2B28F4C36FE0
+              38B59E34CEAE11C455AA8338B5867A3A40A1323D3104CAAC234EED2DF5BC3124
+              8282480405E129E8F5F6B6B2DC79964E2BCB499C5ACF630FFC8EAFD7B125A2D6
+              267B28084F416FB359DFDBD62F1EA7D60192ADAB2B6C814090A70F1EA7D6C1D3
+              8D0D5EB22C951E1E0CFCBD50902DAC181DD4BCDADAB28519F82BF0617494DD6D
+              6B53AEF0FC3E3F679F8F8E54EF9A079D9D91C7C275607C2D1679AAAB4BB9C3E3
+              2686882A2A532A453B657E620062C88942D38282C4105145352D288C18A2995C
+              E2C65D8C094138BFBA33337CA2B797DD135741596CCAF7B91C2B4C4DD5F2447C
+              767090DD11C7FA4FA5C23EE5F36CF7F4147E99F32E93E1B75B5A642AE2D96291
+              AD8D8F1BC3F3F3FCF9C000FB268EF6C2D8983D1EF291F76664C4E51F80F8B19D
+              7C9E57ABD5BAF66871F1FA2615F1DCF1B1233EBBB9C911434A630C2DBDBFCF7B
+              E6E6B87971C1FF562AD246EEF4FABA8C7FDCDB73FF8460602440357E0085E897
+              4C5316C04F7139A83601125DF703228E4F0A7CB0275656A44D02214E8EAD26E3
+              8006575D09961A0D36AD8E3E0062F0C94908609320C4EC1A05C4A00F2178D2D8
+              AEB809D27113041B3E1201BBB1E9AF845E1DFC34099DBA7B482CA1B26AA00842
+              61174C53FA863B3AE4134CF7F7CB270E00913938602F5657657BBCB4C49E0C0D
+              D91BB67079C9BE8883005EA6522E1B59833619046026D817E86365F438F60596
+              1A7B024B8FBD404BDFB8226E208E3CD5F5412C3FBD636A585EFB3D8B386D7C6A
+              102337B47A8DF0C511E45C3231704F6B2B7BD8DDCD7E59165B2B97E1ABE56971
+              4BBCE285C343F2CB1CACDACFB333B63B39E9F93A30C1BEF6F6BAFB28211C8CFD
+              038F360B343313B1610000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoCopy36.png'
+          end>
+        Name = 'icoCopy36'
+      end
+      item
+        MultiResBitmap.Height = 36
+        MultiResBitmap.Width = 36
+        MultiResBitmap.LoadSize = 2
+        MultiResBitmap = <
+          item
+            Width = 36
+            Height = 36
+            PNG = {
+              89504E470D0A1A0A0000000D4948445200000024000000240806000000E10098
+              98000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+              0389494441545847CD985F4853511CC77F77FED9263A857C104D97093E84FAB0
+              888190439430A30729F561F6A2492804161152D4438FD6439009513D6D95D924
+              545C168A21FAD00DA53F4BF165BA998A2999996E6EEAED9CB373E7EE36DB76F7
+              C73E7039E7FC76B7FBE5F7FB9DDFF9DD318028ECE8E0F078507C6D6E263A300C
+              1633D6D000298989E0DCDDA5E6D8912091C06F870352A552224AC21BF931D617
+              46819CF17A769644C965F90F4842E270B448C81E5654C0C9DC5CF2C11BB319EE
+              8D8E429A4C0612C61DDA88B2C371B0BEB505374A4AA054A92436A3D50AADFDFD
+              640E6D23231CCFFBE9E99825F80396A54FE5B87E8B85C3CE2121631717C90D18
+              4D7E3E9CEFEA8A8928B95446677B104186DA5AE6D3DC1C31606E69343113E58D
+              3B49B47A3DA7D76AE90AC0BAB6063F3637411A17472DE1C1CECFC345954A9094
+              4F3E7FE11A8A0AC95C90433C7D26138D68E419329B7D3C8E05F1087288E76C41
+              01F36A6A8AAE22CB2EDA59C1E0775F97A1F069B2B3E1485A1A5C282AA2568047
+              E3E3605E5D0585544A2D81C10F4846F73F9D98802F4D4DA185CC1FCE1D543528
+              914EF48021F3C7078F92509E934367D123A0A0B7939374067049AD8E7A3988C7
+              6E52297360C26215B4013C3A9309AEA3BA948C0E404C7B65256CBDE8E4A47112
+              985E5921B64024A2D2F1D36683999616BF392B000BE2C1736A16707B7898DE21
+              9E90B6BD7D7B9BDCD0595D43466FEE949632ED2C4B57D1459043C7D20FC1299D
+              DEAF972EABD5CC99E7CFE0E3C202B584062E17C1104F473787152974E68B515B
+              C718D18813BB382B0BAE141713FB2FBB1DCA753A70204F272524109B27B811CB
+              48D9FF7705E0B8D99C4E1A498EABEFE9096A176151A8FA12B6D12566F789AA43
+              FB61A8A961A668F8F0F17BFA681E99878B684198FB1E895E7F5C05D7060743F6
+              923761097A5C55C57C5B5AA22B80BB6565C07E9FE7AE0E0C70AD48DCCDA12172
+              B58D8D71DAEEEEE0C48ACD211E9C3B76BB9D7E7B7F44B51F62C0B954D7DB0B33
+              01B6F51FF4EE150C3EDB5E0C5894018DE790B794A90AD870385D1F20F0592147
+              A5C0E07126FE937043160E510959A4F1151464AB1909FC1DFDBE82D01B65ACB0
+              393C9FE572047995661B1B4116EFCAEF3EF42A3D88FADB74B99CACA3016EF837
+              9C4EA8CECB83139999C466B45A504F8D4E4AEFA43E28DE59AD7BFDD8E2FA3A35
+              1F1C2FE9DF31EEBC1A5F5EE65651F1DA89F19F5632D4DE3A517B529E9141B408
+              12DDEDB218B3D7CB03FC055DD8CF741A69D2C20000000049454E44AE426082}
+            FileName = 'D:\mobleTest\delphiChessTT\pictures\icoRep36.png'
+          end>
+        Name = 'icoRep36'
+      end>
+    Destination = <
+      item
+        Layers = <
+          item
+            Name = 'icoExit36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoAdd36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoRed36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoDel36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoOpt36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoBack36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoKeyb36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoFadd36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoFred36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoFdel36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoMadd36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoMred36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoMdel36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoTable36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoPls36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'table36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoOlimp36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'olimp36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoCopy36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end
+      item
+        Layers = <
+          item
+            Name = 'icoRep36'
+            SourceRect.Right = 36.000000000000000000
+            SourceRect.Bottom = 36.000000000000000000
+          end>
+      end>
+    Left = 584
+    Top = 288
+  end
+  object FDConnection: TFDConnection
+    Params.Strings = (
+      'Database=D:\mobleTest\compettable\Win32\Debug\compettable.db'
+      'DriverID=SQLite')
+    LoginPrompt = False
+    BeforeConnect = FDConnectionBeforeConnect
+    Left = 472
+    Top = 144
+  end
+  object FDQuery: TFDQuery
+    Connection = FDConnection
+    SQL.Strings = (
+      '')
+    Left = 472
+    Top = 512
+  end
+  object FDGUIxWaitCursor: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 584
+    Top = 144
+  end
+  object FDTpara: TFDTable
+    IndexFieldNames = 'id'
+    Connection = FDConnection
+    UpdateOptions.UpdateTableName = 'olimpair'
+    TableName = 'olimpair'
+    Left = 472
+    Top = 216
+    object FDTparaid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object FDTparaidAL: TIntegerField
+      FieldName = 'idAL'
+      Origin = 'idAL'
+    end
+    object FDTparaidAR: TIntegerField
+      FieldName = 'idAR'
+      Origin = 'idAR'
+    end
+    object FDTparaidBL: TIntegerField
+      FieldName = 'idBL'
+      Origin = 'idBL'
+    end
+    object FDTparatxAL: TStringField
+      FieldName = 'txAL'
+      Origin = 'txAL'
+      Size = 30
+    end
+    object FDTparatxAR: TStringField
+      FieldName = 'txAR'
+      Origin = 'txAR'
+      Size = 30
+    end
+    object FDTparatxBL: TStringField
+      FieldName = 'txBL'
+      Origin = 'txBL'
+      Size = 30
+    end
+    object FDTparaidBR: TIntegerField
+      FieldName = 'idBR'
+      Origin = 'idBR'
+    end
+    object FDTparatxBR: TStringField
+      FieldName = 'txBR'
+      Origin = 'txBR'
+      Size = 30
+    end
+    object FDTparaidCL: TIntegerField
+      FieldName = 'idCL'
+      Origin = 'idCL'
+    end
+    object FDTparatxCL: TStringField
+      FieldName = 'txCL'
+      Origin = 'txCL'
+      Size = 30
+    end
+    object FDTparaidCR: TIntegerField
+      FieldName = 'idCR'
+      Origin = 'idCR'
+    end
+    object FDTparatxCR: TStringField
+      FieldName = 'txCR'
+      Origin = 'txCR'
+      Size = 30
+    end
+    object FDTparaidDL: TIntegerField
+      FieldName = 'idDL'
+      Origin = 'idDL'
+    end
+    object FDTparatxDL: TStringField
+      FieldName = 'txDL'
+      Origin = 'txDL'
+      Size = 30
+    end
+    object FDTparaidDR: TIntegerField
+      FieldName = 'idDR'
+      Origin = 'idDR'
+    end
+    object FDTparatxDR: TStringField
+      FieldName = 'txDR'
+      Origin = 'txDR'
+      Size = 30
+    end
+  end
+  object FDTbatl: TFDTable
+    IndexFieldNames = 'btid'
+    Connection = FDConnection
+    UpdateOptions.UpdateTableName = 'battle'
+    TableName = 'battle'
+    Left = 472
+    Top = 288
+    object FDTbatlbtid: TFDAutoIncField
+      FieldName = 'btid'
+      Origin = 'btid'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object FDTbatltourid: TIntegerField
+      FieldName = 'tourid'
+      Origin = 'tourid'
+    end
+    object FDTbatlkrug: TIntegerField
+      FieldName = 'krug'
+      Origin = 'krug'
+    end
+    object FDTbatltournum1: TIntegerField
+      FieldName = 'tournum1'
+      Origin = 'tournum1'
+    end
+    object FDTbatlfgid1: TIntegerField
+      FieldName = 'fgid1'
+      Origin = 'fgid1'
+    end
+    object FDTbatlfmim1: TStringField
+      FieldName = 'fmim1'
+      Origin = 'fmim1'
+      Size = 63
+    end
+    object FDTbatlpoints1: TBCDField
+      FieldName = 'points1'
+      Origin = 'points1'
+      Precision = 5
+      Size = 1
+    end
+    object FDTbatlletter1: TStringField
+      FieldName = 'letter1'
+      Origin = 'letter1'
+      Size = 1
+    end
+    object FDTbatlwinner1: TIntegerField
+      FieldName = 'winner1'
+      Origin = 'winner1'
+    end
+    object FDTbatltournum2: TIntegerField
+      FieldName = 'tournum2'
+      Origin = 'tournum2'
+    end
+    object FDTbatlfgid2: TIntegerField
+      FieldName = 'fgid2'
+      Origin = 'fgid2'
+    end
+    object FDTbatlfmim2: TStringField
+      FieldName = 'fmim2'
+      Origin = 'fmim2'
+      Size = 63
+    end
+    object FDTbatlpoints2: TBCDField
+      FieldName = 'points2'
+      Origin = 'points2'
+      Precision = 5
+      Size = 1
+    end
+    object FDTbatlletter2: TStringField
+      FieldName = 'letter2'
+      Origin = 'letter2'
+      Size = 1
+    end
+    object FDTbatlwinner2: TIntegerField
+      FieldName = 'winner2'
+      Origin = 'winner2'
+    end
+    object FDTbatlfinish: TBooleanField
+      FieldName = 'finish'
+      Origin = 'finish'
+    end
+    object FDTbatlkomm: TBlobField
+      FieldName = 'komm'
+      Origin = 'komm'
+    end
+  end
+  object FDTmpRep: TFDTable
+    IndexFieldNames = 'idtr'
+    Connection = FDConnection
+    UpdateOptions.UpdateTableName = 'tmpreport'
+    TableName = 'tmpreport'
+    Left = 472
+    Top = 440
+    object FDTmpRepidtr: TFDAutoIncField
+      FieldName = 'idtr'
+      Origin = 'idtr'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object FDTmpReptournum: TIntegerField
+      FieldName = 'tournum'
+      Origin = 'tournum'
+    end
+    object FDTmpRepname: TStringField
+      FieldName = 'name'
+      Origin = 'name'
+      Size = 63
+    end
+    object FDTmpRepwins: TIntegerField
+      FieldName = 'wins'
+      Origin = 'wins'
+    end
+    object FDTmpReppoints: TBCDField
+      FieldName = 'points'
+      Origin = 'points'
+      Precision = 5
+      Size = 1
+    end
+    object FDTmpRepekran: TStringField
+      FieldName = 'ekran'
+      Origin = 'ekran'
+      Size = 5
+    end
+    object FDTmpRepplace: TIntegerField
+      FieldName = 'place'
+      Origin = 'place'
+    end
+  end
+  object FDTOtmp: TFDTable
+    IndexFieldNames = 'id'
+    Connection = FDConnection
+    UpdateOptions.UpdateTableName = 'olimptmp'
+    TableName = 'olimptmp'
+    Left = 472
+    Top = 368
+    object FDTOtmpid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object FDTOtmpIntegerField01F001: TIntegerField
+      FieldName = '01F001'
+      Origin = '"01F001"'
+    end
+    object FDTOtmpIntegerField01F128: TIntegerField
+      FieldName = '01F128'
+      Origin = '"01F128"'
+    end
+    object FDTOtmpIntegerField02F065: TIntegerField
+      FieldName = '02F065'
+      Origin = '"02F065"'
+    end
+    object FDTOtmpIntegerField02F064: TIntegerField
+      FieldName = '02F064'
+      Origin = '"02F064"'
+    end
+    object FDTOtmpIntegerField03F097: TIntegerField
+      FieldName = '03F097'
+      Origin = '"03F097"'
+    end
+    object FDTOtmpIntegerField03F032: TIntegerField
+      FieldName = '03F032'
+      Origin = '"03F032"'
+    end
+    object FDTOtmpIntegerField04F033: TIntegerField
+      FieldName = '04F033'
+      Origin = '"04F033"'
+    end
+    object FDTOtmpIntegerField04F096: TIntegerField
+      FieldName = '04F096'
+      Origin = '"04F096"'
+    end
+    object FDTOtmpIntegerField05F113: TIntegerField
+      FieldName = '05F113'
+      Origin = '"05F113"'
+    end
+    object FDTOtmpIntegerField05F016: TIntegerField
+      FieldName = '05F016'
+      Origin = '"05F016"'
+    end
+    object FDTOtmpIntegerField06F049: TIntegerField
+      FieldName = '06F049'
+      Origin = '"06F049"'
+    end
+    object FDTOtmpIntegerField06F080: TIntegerField
+      FieldName = '06F080'
+      Origin = '"06F080"'
+    end
+    object FDTOtmpIntegerField07F017: TIntegerField
+      FieldName = '07F017'
+      Origin = '"07F017"'
+    end
+    object FDTOtmpIntegerField07F112: TIntegerField
+      FieldName = '07F112'
+      Origin = '"07F112"'
+    end
+    object FDTOtmpIntegerField08F081: TIntegerField
+      FieldName = '08F081'
+      Origin = '"08F081"'
+    end
+    object FDTOtmpIntegerField08F048: TIntegerField
+      FieldName = '08F048'
+      Origin = '"08F048"'
+    end
+    object FDTOtmpIntegerField09F121: TIntegerField
+      FieldName = '09F121'
+      Origin = '"09F121"'
+    end
+    object FDTOtmpIntegerField09F008: TIntegerField
+      FieldName = '09F008'
+      Origin = '"09F008"'
+    end
+    object FDTOtmpIntegerField10F057: TIntegerField
+      FieldName = '10F057'
+      Origin = '"10F057"'
+    end
+    object FDTOtmpIntegerField10F072: TIntegerField
+      FieldName = '10F072'
+      Origin = '"10F072"'
+    end
+    object FDTOtmpIntegerField11F025: TIntegerField
+      FieldName = '11F025'
+      Origin = '"11F025"'
+    end
+    object FDTOtmpIntegerField11F104: TIntegerField
+      FieldName = '11F104'
+      Origin = '"11F104"'
+    end
+    object FDTOtmpIntegerField12F089: TIntegerField
+      FieldName = '12F089'
+      Origin = '"12F089"'
+    end
+    object FDTOtmpIntegerField12F040: TIntegerField
+      FieldName = '12F040'
+      Origin = '"12F040"'
+    end
+    object FDTOtmpIntegerField13F009: TIntegerField
+      FieldName = '13F009'
+      Origin = '"13F009"'
+    end
+    object FDTOtmpIntegerField13F120: TIntegerField
+      FieldName = '13F120'
+      Origin = '"13F120"'
+    end
+    object FDTOtmpIntegerField14F073: TIntegerField
+      FieldName = '14F073'
+      Origin = '"14F073"'
+    end
+    object FDTOtmpIntegerField14F056: TIntegerField
+      FieldName = '14F056'
+      Origin = '"14F056"'
+    end
+    object FDTOtmpIntegerField15F105: TIntegerField
+      FieldName = '15F105'
+      Origin = '"15F105"'
+    end
+    object FDTOtmpIntegerField15F024: TIntegerField
+      FieldName = '15F024'
+      Origin = '"15F024"'
+    end
+    object FDTOtmpIntegerField16F041: TIntegerField
+      FieldName = '16F041'
+      Origin = '"16F041"'
+    end
+    object FDTOtmpIntegerField16F088: TIntegerField
+      FieldName = '16F088'
+      Origin = '"16F088"'
+    end
+    object FDTOtmpIntegerField17F125: TIntegerField
+      FieldName = '17F125'
+      Origin = '"17F125"'
+    end
+    object FDTOtmpIntegerField17F004: TIntegerField
+      FieldName = '17F004'
+      Origin = '"17F004"'
+    end
+    object FDTOtmpIntegerField18F061: TIntegerField
+      FieldName = '18F061'
+      Origin = '"18F061"'
+    end
+    object FDTOtmpIntegerField18F068: TIntegerField
+      FieldName = '18F068'
+      Origin = '"18F068"'
+    end
+    object FDTOtmpIntegerField19F029: TIntegerField
+      FieldName = '19F029'
+      Origin = '"19F029"'
+    end
+    object FDTOtmpIntegerField19F100: TIntegerField
+      FieldName = '19F100'
+      Origin = '"19F100"'
+    end
+    object FDTOtmpIntegerField20F093: TIntegerField
+      FieldName = '20F093'
+      Origin = '"20F093"'
+    end
+    object FDTOtmpIntegerField20F036: TIntegerField
+      FieldName = '20F036'
+      Origin = '"20F036"'
+    end
+    object FDTOtmpIntegerField21F013: TIntegerField
+      FieldName = '21F013'
+      Origin = '"21F013"'
+    end
+    object FDTOtmpIntegerField21F116: TIntegerField
+      FieldName = '21F116'
+      Origin = '"21F116"'
+    end
+    object FDTOtmpIntegerField22F077: TIntegerField
+      FieldName = '22F077'
+      Origin = '"22F077"'
+    end
+    object FDTOtmpIntegerField22F052: TIntegerField
+      FieldName = '22F052'
+      Origin = '"22F052"'
+    end
+    object FDTOtmpIntegerField23F109: TIntegerField
+      FieldName = '23F109'
+      Origin = '"23F109"'
+    end
+    object FDTOtmpIntegerField23F020: TIntegerField
+      FieldName = '23F020'
+      Origin = '"23F020"'
+    end
+    object FDTOtmpIntegerField24F045: TIntegerField
+      FieldName = '24F045'
+      Origin = '"24F045"'
+    end
+    object FDTOtmpIntegerField24F084: TIntegerField
+      FieldName = '24F084'
+      Origin = '"24F084"'
+    end
+    object FDTOtmpIntegerField25F005: TIntegerField
+      FieldName = '25F005'
+      Origin = '"25F005"'
+    end
+    object FDTOtmpIntegerField25F124: TIntegerField
+      FieldName = '25F124'
+      Origin = '"25F124"'
+    end
+    object FDTOtmpIntegerField26F069: TIntegerField
+      FieldName = '26F069'
+      Origin = '"26F069"'
+    end
+    object FDTOtmpIntegerField26F060: TIntegerField
+      FieldName = '26F060'
+      Origin = '"26F060"'
+    end
+    object FDTOtmpIntegerField27F101: TIntegerField
+      FieldName = '27F101'
+      Origin = '"27F101"'
+    end
+    object FDTOtmpIntegerField27F028: TIntegerField
+      FieldName = '27F028'
+      Origin = '"27F028"'
+    end
+    object FDTOtmpIntegerField28F037: TIntegerField
+      FieldName = '28F037'
+      Origin = '"28F037"'
+    end
+    object FDTOtmpIntegerField28F092: TIntegerField
+      FieldName = '28F092'
+      Origin = '"28F092"'
+    end
+    object FDTOtmpIntegerField29F117: TIntegerField
+      FieldName = '29F117'
+      Origin = '"29F117"'
+    end
+    object FDTOtmpIntegerField29F012: TIntegerField
+      FieldName = '29F012'
+      Origin = '"29F012"'
+    end
+    object FDTOtmpIntegerField30F053: TIntegerField
+      FieldName = '30F053'
+      Origin = '"30F053"'
+    end
+    object FDTOtmpIntegerField30F076: TIntegerField
+      FieldName = '30F076'
+      Origin = '"30F076"'
+    end
+    object FDTOtmpIntegerField31F021: TIntegerField
+      FieldName = '31F021'
+      Origin = '"31F021"'
+    end
+    object FDTOtmpIntegerField31F108: TIntegerField
+      FieldName = '31F108'
+      Origin = '"31F108"'
+    end
+    object FDTOtmpIntegerField32F085: TIntegerField
+      FieldName = '32F085'
+      Origin = '"32F085"'
+    end
+    object FDTOtmpIntegerField32F044: TIntegerField
+      FieldName = '32F044'
+      Origin = '"32F044"'
+    end
+    object FDTOtmpIntegerField33F127: TIntegerField
+      FieldName = '33F127'
+      Origin = '"33F127"'
+    end
+    object FDTOtmpIntegerField33F002: TIntegerField
+      FieldName = '33F002'
+      Origin = '"33F002"'
+    end
+    object FDTOtmpIntegerField34F063: TIntegerField
+      FieldName = '34F063'
+      Origin = '"34F063"'
+    end
+    object FDTOtmpIntegerField34F066: TIntegerField
+      FieldName = '34F066'
+      Origin = '"34F066"'
+    end
+    object FDTOtmpIntegerField35F031: TIntegerField
+      FieldName = '35F031'
+      Origin = '"35F031"'
+    end
+    object FDTOtmpIntegerField35F098: TIntegerField
+      FieldName = '35F098'
+      Origin = '"35F098"'
+    end
+    object FDTOtmpIntegerField36F095: TIntegerField
+      FieldName = '36F095'
+      Origin = '"36F095"'
+    end
+    object FDTOtmpIntegerField36F034: TIntegerField
+      FieldName = '36F034'
+      Origin = '"36F034"'
+    end
+    object FDTOtmpIntegerField37F015: TIntegerField
+      FieldName = '37F015'
+      Origin = '"37F015"'
+    end
+    object FDTOtmpIntegerField37F114: TIntegerField
+      FieldName = '37F114'
+      Origin = '"37F114"'
+    end
+    object FDTOtmpIntegerField38F079: TIntegerField
+      FieldName = '38F079'
+      Origin = '"38F079"'
+    end
+    object FDTOtmpIntegerField38F050: TIntegerField
+      FieldName = '38F050'
+      Origin = '"38F050"'
+    end
+    object FDTOtmpIntegerField39F111: TIntegerField
+      FieldName = '39F111'
+      Origin = '"39F111"'
+    end
+    object FDTOtmpIntegerField39F018: TIntegerField
+      FieldName = '39F018'
+      Origin = '"39F018"'
+    end
+    object FDTOtmpIntegerField40F047: TIntegerField
+      FieldName = '40F047'
+      Origin = '"40F047"'
+    end
+    object FDTOtmpIntegerField40F082: TIntegerField
+      FieldName = '40F082'
+      Origin = '"40F082"'
+    end
+    object FDTOtmpIntegerField41F007: TIntegerField
+      FieldName = '41F007'
+      Origin = '"41F007"'
+    end
+    object FDTOtmpIntegerField41F122: TIntegerField
+      FieldName = '41F122'
+      Origin = '"41F122"'
+    end
+    object FDTOtmpIntegerField42F071: TIntegerField
+      FieldName = '42F071'
+      Origin = '"42F071"'
+    end
+    object FDTOtmpIntegerField42F058: TIntegerField
+      FieldName = '42F058'
+      Origin = '"42F058"'
+    end
+    object FDTOtmpIntegerField43F103: TIntegerField
+      FieldName = '43F103'
+      Origin = '"43F103"'
+    end
+    object FDTOtmpIntegerField43F026: TIntegerField
+      FieldName = '43F026'
+      Origin = '"43F026"'
+    end
+    object FDTOtmpIntegerField44F039: TIntegerField
+      FieldName = '44F039'
+      Origin = '"44F039"'
+    end
+    object FDTOtmpIntegerField44F090: TIntegerField
+      FieldName = '44F090'
+      Origin = '"44F090"'
+    end
+    object FDTOtmpIntegerField45F119: TIntegerField
+      FieldName = '45F119'
+      Origin = '"45F119"'
+    end
+    object FDTOtmpIntegerField45F010: TIntegerField
+      FieldName = '45F010'
+      Origin = '"45F010"'
+    end
+    object FDTOtmpIntegerField46F055: TIntegerField
+      FieldName = '46F055'
+      Origin = '"46F055"'
+    end
+    object FDTOtmpIntegerField46F074: TIntegerField
+      FieldName = '46F074'
+      Origin = '"46F074"'
+    end
+    object FDTOtmpIntegerField47F023: TIntegerField
+      FieldName = '47F023'
+      Origin = '"47F023"'
+    end
+    object FDTOtmpIntegerField47F106: TIntegerField
+      FieldName = '47F106'
+      Origin = '"47F106"'
+    end
+    object FDTOtmpIntegerField48F087: TIntegerField
+      FieldName = '48F087'
+      Origin = '"48F087"'
+    end
+    object FDTOtmpIntegerField48F042: TIntegerField
+      FieldName = '48F042'
+      Origin = '"48F042"'
+    end
+    object FDTOtmpIntegerField49F003: TIntegerField
+      FieldName = '49F003'
+      Origin = '"49F003"'
+    end
+    object FDTOtmpIntegerField49F126: TIntegerField
+      FieldName = '49F126'
+      Origin = '"49F126"'
+    end
+    object FDTOtmpIntegerField50F067: TIntegerField
+      FieldName = '50F067'
+      Origin = '"50F067"'
+    end
+    object FDTOtmpIntegerField50F062: TIntegerField
+      FieldName = '50F062'
+      Origin = '"50F062"'
+    end
+    object FDTOtmpIntegerField51F099: TIntegerField
+      FieldName = '51F099'
+      Origin = '"51F099"'
+    end
+    object FDTOtmpIntegerField51F030: TIntegerField
+      FieldName = '51F030'
+      Origin = '"51F030"'
+    end
+    object FDTOtmpIntegerField52F035: TIntegerField
+      FieldName = '52F035'
+      Origin = '"52F035"'
+    end
+    object FDTOtmpIntegerField52F094: TIntegerField
+      FieldName = '52F094'
+      Origin = '"52F094"'
+    end
+    object FDTOtmpIntegerField53F115: TIntegerField
+      FieldName = '53F115'
+      Origin = '"53F115"'
+    end
+    object FDTOtmpIntegerField53F014: TIntegerField
+      FieldName = '53F014'
+      Origin = '"53F014"'
+    end
+    object FDTOtmpIntegerField54F051: TIntegerField
+      FieldName = '54F051'
+      Origin = '"54F051"'
+    end
+    object FDTOtmpIntegerField54F078: TIntegerField
+      FieldName = '54F078'
+      Origin = '"54F078"'
+    end
+    object FDTOtmpIntegerField55F019: TIntegerField
+      FieldName = '55F019'
+      Origin = '"55F019"'
+    end
+    object FDTOtmpIntegerField55F110: TIntegerField
+      FieldName = '55F110'
+      Origin = '"55F110"'
+    end
+    object FDTOtmpIntegerField56F083: TIntegerField
+      FieldName = '56F083'
+      Origin = '"56F083"'
+    end
+    object FDTOtmpIntegerField56F046: TIntegerField
+      FieldName = '56F046'
+      Origin = '"56F046"'
+    end
+    object FDTOtmpIntegerField57F123: TIntegerField
+      FieldName = '57F123'
+      Origin = '"57F123"'
+    end
+    object FDTOtmpIntegerField57F006: TIntegerField
+      FieldName = '57F006'
+      Origin = '"57F006"'
+    end
+    object FDTOtmpIntegerField58F059: TIntegerField
+      FieldName = '58F059'
+      Origin = '"58F059"'
+    end
+    object FDTOtmpIntegerField58F070: TIntegerField
+      FieldName = '58F070'
+      Origin = '"58F070"'
+    end
+    object FDTOtmpIntegerField59F027: TIntegerField
+      FieldName = '59F027'
+      Origin = '"59F027"'
+    end
+    object FDTOtmpIntegerField59F102: TIntegerField
+      FieldName = '59F102'
+      Origin = '"59F102"'
+    end
+    object FDTOtmpIntegerField60F091: TIntegerField
+      FieldName = '60F091'
+      Origin = '"60F091"'
+    end
+    object FDTOtmpIntegerField60F038: TIntegerField
+      FieldName = '60F038'
+      Origin = '"60F038"'
+    end
+    object FDTOtmpIntegerField61F011: TIntegerField
+      FieldName = '61F011'
+      Origin = '"61F011"'
+    end
+    object FDTOtmpIntegerField61F118: TIntegerField
+      FieldName = '61F118'
+      Origin = '"61F118"'
+    end
+    object FDTOtmpIntegerField62F075: TIntegerField
+      FieldName = '62F075'
+      Origin = '"62F075"'
+    end
+    object FDTOtmpIntegerField62F054: TIntegerField
+      FieldName = '62F054'
+      Origin = '"62F054"'
+    end
+    object FDTOtmpIntegerField63F107: TIntegerField
+      FieldName = '63F107'
+      Origin = '"63F107"'
+    end
+    object FDTOtmpIntegerField63F022: TIntegerField
+      FieldName = '63F022'
+      Origin = '"63F022"'
+    end
+    object FDTOtmpIntegerField64F043: TIntegerField
+      FieldName = '64F043'
+      Origin = '"64F043"'
+    end
+    object FDTOtmpIntegerField64F086: TIntegerField
+      FieldName = '64F086'
+      Origin = '"64F086"'
+    end
+    object FDTOtmpKR1: TBooleanField
+      FieldName = 'KR1'
+      Origin = 'KR1'
+    end
+    object FDTOtmpIntegerField2L01: TIntegerField
+      FieldName = '2L01'
+      Origin = '"2L01"'
+    end
+    object FDTOtmpIntegerField2R01: TIntegerField
+      FieldName = '2R01'
+      Origin = '"2R01"'
+    end
+    object FDTOtmpIntegerField2L02: TIntegerField
+      FieldName = '2L02'
+      Origin = '"2L02"'
+    end
+    object FDTOtmpIntegerField2R02: TIntegerField
+      FieldName = '2R02'
+      Origin = '"2R02"'
+    end
+    object FDTOtmpIntegerField2L03: TIntegerField
+      FieldName = '2L03'
+      Origin = '"2L03"'
+    end
+    object FDTOtmpIntegerField2R03: TIntegerField
+      FieldName = '2R03'
+      Origin = '"2R03"'
+    end
+    object FDTOtmpIntegerField2L04: TIntegerField
+      FieldName = '2L04'
+      Origin = '"2L04"'
+    end
+    object FDTOtmpIntegerField2R04: TIntegerField
+      FieldName = '2R04'
+      Origin = '"2R04"'
+    end
+    object FDTOtmpIntegerField2L05: TIntegerField
+      FieldName = '2L05'
+      Origin = '"2L05"'
+    end
+    object FDTOtmpIntegerField2R05: TIntegerField
+      FieldName = '2R05'
+      Origin = '"2R05"'
+    end
+    object FDTOtmpIntegerField2L06: TIntegerField
+      FieldName = '2L06'
+      Origin = '"2L06"'
+    end
+    object FDTOtmpIntegerField2R06: TIntegerField
+      FieldName = '2R06'
+      Origin = '"2R06"'
+    end
+    object FDTOtmpIntegerField2L07: TIntegerField
+      FieldName = '2L07'
+      Origin = '"2L07"'
+    end
+    object FDTOtmpIntegerField2R07: TIntegerField
+      FieldName = '2R07'
+      Origin = '"2R07"'
+    end
+    object FDTOtmpIntegerField2L08: TIntegerField
+      FieldName = '2L08'
+      Origin = '"2L08"'
+    end
+    object FDTOtmpIntegerField2R08: TIntegerField
+      FieldName = '2R08'
+      Origin = '"2R08"'
+    end
+    object FDTOtmpIntegerField2L09: TIntegerField
+      FieldName = '2L09'
+      Origin = '"2L09"'
+    end
+    object FDTOtmpIntegerField2R09: TIntegerField
+      FieldName = '2R09'
+      Origin = '"2R09"'
+    end
+    object FDTOtmpIntegerField2L10: TIntegerField
+      FieldName = '2L10'
+      Origin = '"2L10"'
+    end
+    object FDTOtmpIntegerField2R10: TIntegerField
+      FieldName = '2R10'
+      Origin = '"2R10"'
+    end
+    object FDTOtmpIntegerField2L11: TIntegerField
+      FieldName = '2L11'
+      Origin = '"2L11"'
+    end
+    object FDTOtmpIntegerField2R11: TIntegerField
+      FieldName = '2R11'
+      Origin = '"2R11"'
+    end
+    object FDTOtmpIntegerField2L12: TIntegerField
+      FieldName = '2L12'
+      Origin = '"2L12"'
+    end
+    object FDTOtmpIntegerField2R12: TIntegerField
+      FieldName = '2R12'
+      Origin = '"2R12"'
+    end
+    object FDTOtmpIntegerField2L13: TIntegerField
+      FieldName = '2L13'
+      Origin = '"2L13"'
+    end
+    object FDTOtmpIntegerField2R13: TIntegerField
+      FieldName = '2R13'
+      Origin = '"2R13"'
+    end
+    object FDTOtmpIntegerField2L14: TIntegerField
+      FieldName = '2L14'
+      Origin = '"2L14"'
+    end
+    object FDTOtmpIntegerField2R14: TIntegerField
+      FieldName = '2R14'
+      Origin = '"2R14"'
+    end
+    object FDTOtmpIntegerField2L15: TIntegerField
+      FieldName = '2L15'
+      Origin = '"2L15"'
+    end
+    object FDTOtmpIntegerField2R15: TIntegerField
+      FieldName = '2R15'
+      Origin = '"2R15"'
+    end
+    object FDTOtmpIntegerField2L16: TIntegerField
+      FieldName = '2L16'
+      Origin = '"2L16"'
+    end
+    object FDTOtmpIntegerField2R16: TIntegerField
+      FieldName = '2R16'
+      Origin = '"2R16"'
+    end
+    object FDTOtmpIntegerField2L17: TIntegerField
+      FieldName = '2L17'
+      Origin = '"2L17"'
+    end
+    object FDTOtmpIntegerField2R17: TIntegerField
+      FieldName = '2R17'
+      Origin = '"2R17"'
+    end
+    object FDTOtmpIntegerField2L18: TIntegerField
+      FieldName = '2L18'
+      Origin = '"2L18"'
+    end
+    object FDTOtmpIntegerField2R18: TIntegerField
+      FieldName = '2R18'
+      Origin = '"2R18"'
+    end
+    object FDTOtmpIntegerField2L19: TIntegerField
+      FieldName = '2L19'
+      Origin = '"2L19"'
+    end
+    object FDTOtmpIntegerField2R19: TIntegerField
+      FieldName = '2R19'
+      Origin = '"2R19"'
+    end
+    object FDTOtmpIntegerField2L20: TIntegerField
+      FieldName = '2L20'
+      Origin = '"2L20"'
+    end
+    object FDTOtmpIntegerField2R20: TIntegerField
+      FieldName = '2R20'
+      Origin = '"2R20"'
+    end
+    object FDTOtmpIntegerField2L21: TIntegerField
+      FieldName = '2L21'
+      Origin = '"2L21"'
+    end
+    object FDTOtmpIntegerField2R21: TIntegerField
+      FieldName = '2R21'
+      Origin = '"2R21"'
+    end
+    object FDTOtmpIntegerField2L22: TIntegerField
+      FieldName = '2L22'
+      Origin = '"2L22"'
+    end
+    object FDTOtmpIntegerField2R22: TIntegerField
+      FieldName = '2R22'
+      Origin = '"2R22"'
+    end
+    object FDTOtmpIntegerField2L23: TIntegerField
+      FieldName = '2L23'
+      Origin = '"2L23"'
+    end
+    object FDTOtmpIntegerField2R23: TIntegerField
+      FieldName = '2R23'
+      Origin = '"2R23"'
+    end
+    object FDTOtmpIntegerField2L24: TIntegerField
+      FieldName = '2L24'
+      Origin = '"2L24"'
+    end
+    object FDTOtmpIntegerField2R24: TIntegerField
+      FieldName = '2R24'
+      Origin = '"2R24"'
+    end
+    object FDTOtmpIntegerField2L25: TIntegerField
+      FieldName = '2L25'
+      Origin = '"2L25"'
+    end
+    object FDTOtmpIntegerField2R25: TIntegerField
+      FieldName = '2R25'
+      Origin = '"2R25"'
+    end
+    object FDTOtmpIntegerField2L26: TIntegerField
+      FieldName = '2L26'
+      Origin = '"2L26"'
+    end
+    object FDTOtmpIntegerField2R26: TIntegerField
+      FieldName = '2R26'
+      Origin = '"2R26"'
+    end
+    object FDTOtmpIntegerField2L27: TIntegerField
+      FieldName = '2L27'
+      Origin = '"2L27"'
+    end
+    object FDTOtmpIntegerField2R27: TIntegerField
+      FieldName = '2R27'
+      Origin = '"2R27"'
+    end
+    object FDTOtmpIntegerField2L28: TIntegerField
+      FieldName = '2L28'
+      Origin = '"2L28"'
+    end
+    object FDTOtmpIntegerField2R28: TIntegerField
+      FieldName = '2R28'
+      Origin = '"2R28"'
+    end
+    object FDTOtmpIntegerField2L29: TIntegerField
+      FieldName = '2L29'
+      Origin = '"2L29"'
+    end
+    object FDTOtmpIntegerField2R29: TIntegerField
+      FieldName = '2R29'
+      Origin = '"2R29"'
+    end
+    object FDTOtmpIntegerField2L30: TIntegerField
+      FieldName = '2L30'
+      Origin = '"2L30"'
+    end
+    object FDTOtmpIntegerField2R30: TIntegerField
+      FieldName = '2R30'
+      Origin = '"2R30"'
+    end
+    object FDTOtmpIntegerField2L31: TIntegerField
+      FieldName = '2L31'
+      Origin = '"2L31"'
+    end
+    object FDTOtmpIntegerField2R31: TIntegerField
+      FieldName = '2R31'
+      Origin = '"2R31"'
+    end
+    object FDTOtmpIntegerField2L32: TIntegerField
+      FieldName = '2L32'
+      Origin = '"2L32"'
+    end
+    object FDTOtmpIntegerField2R32: TIntegerField
+      FieldName = '2R32'
+      Origin = '"2R32"'
+    end
+    object FDTOtmpKR2: TBooleanField
+      FieldName = 'KR2'
+      Origin = 'KR2'
+    end
+    object FDTOtmpIntegerField3L01: TIntegerField
+      FieldName = '3L01'
+      Origin = '"3L01"'
+    end
+    object FDTOtmpIntegerField3R01: TIntegerField
+      FieldName = '3R01'
+      Origin = '"3R01"'
+    end
+    object FDTOtmpIntegerField3L02: TIntegerField
+      FieldName = '3L02'
+      Origin = '"3L02"'
+    end
+    object FDTOtmpIntegerField3R02: TIntegerField
+      FieldName = '3R02'
+      Origin = '"3R02"'
+    end
+    object FDTOtmpIntegerField3L03: TIntegerField
+      FieldName = '3L03'
+      Origin = '"3L03"'
+    end
+    object FDTOtmpIntegerField3R03: TIntegerField
+      FieldName = '3R03'
+      Origin = '"3R03"'
+    end
+    object FDTOtmpIntegerField3L04: TIntegerField
+      FieldName = '3L04'
+      Origin = '"3L04"'
+    end
+    object FDTOtmpIntegerField3R04: TIntegerField
+      FieldName = '3R04'
+      Origin = '"3R04"'
+    end
+    object FDTOtmpIntegerField3L05: TIntegerField
+      FieldName = '3L05'
+      Origin = '"3L05"'
+    end
+    object FDTOtmpIntegerField3R05: TIntegerField
+      FieldName = '3R05'
+      Origin = '"3R05"'
+    end
+    object FDTOtmpIntegerField3L06: TIntegerField
+      FieldName = '3L06'
+      Origin = '"3L06"'
+    end
+    object FDTOtmpIntegerField3R06: TIntegerField
+      FieldName = '3R06'
+      Origin = '"3R06"'
+    end
+    object FDTOtmpIntegerField3L07: TIntegerField
+      FieldName = '3L07'
+      Origin = '"3L07"'
+    end
+    object FDTOtmpIntegerField3R07: TIntegerField
+      FieldName = '3R07'
+      Origin = '"3R07"'
+    end
+    object FDTOtmpIntegerField3L08: TIntegerField
+      FieldName = '3L08'
+      Origin = '"3L08"'
+    end
+    object FDTOtmpIntegerField3R08: TIntegerField
+      FieldName = '3R08'
+      Origin = '"3R08"'
+    end
+    object FDTOtmpIntegerField3L09: TIntegerField
+      FieldName = '3L09'
+      Origin = '"3L09"'
+    end
+    object FDTOtmpIntegerField3R09: TIntegerField
+      FieldName = '3R09'
+      Origin = '"3R09"'
+    end
+    object FDTOtmpIntegerField3L10: TIntegerField
+      FieldName = '3L10'
+      Origin = '"3L10"'
+    end
+    object FDTOtmpIntegerField3R10: TIntegerField
+      FieldName = '3R10'
+      Origin = '"3R10"'
+    end
+    object FDTOtmpIntegerField3L11: TIntegerField
+      FieldName = '3L11'
+      Origin = '"3L11"'
+    end
+    object FDTOtmpIntegerField3R11: TIntegerField
+      FieldName = '3R11'
+      Origin = '"3R11"'
+    end
+    object FDTOtmpIntegerField3L12: TIntegerField
+      FieldName = '3L12'
+      Origin = '"3L12"'
+    end
+    object FDTOtmpIntegerField3R12: TIntegerField
+      FieldName = '3R12'
+      Origin = '"3R12"'
+    end
+    object FDTOtmpIntegerField3L13: TIntegerField
+      FieldName = '3L13'
+      Origin = '"3L13"'
+    end
+    object FDTOtmpIntegerField3R13: TIntegerField
+      FieldName = '3R13'
+      Origin = '"3R13"'
+    end
+    object FDTOtmpIntegerField3L14: TIntegerField
+      FieldName = '3L14'
+      Origin = '"3L14"'
+    end
+    object FDTOtmpIntegerField3R14: TIntegerField
+      FieldName = '3R14'
+      Origin = '"3R14"'
+    end
+    object FDTOtmpIntegerField3L15: TIntegerField
+      FieldName = '3L15'
+      Origin = '"3L15"'
+    end
+    object FDTOtmpIntegerField3R15: TIntegerField
+      FieldName = '3R15'
+      Origin = '"3R15"'
+    end
+    object FDTOtmpIntegerField3L16: TIntegerField
+      FieldName = '3L16'
+      Origin = '"3L16"'
+    end
+    object FDTOtmpIntegerField3R16: TIntegerField
+      FieldName = '3R16'
+      Origin = '"3R16"'
+    end
+    object FDTOtmpKR3: TBooleanField
+      FieldName = 'KR3'
+      Origin = 'KR3'
+    end
+    object FDTOtmpIntegerField4L01: TIntegerField
+      FieldName = '4L01'
+      Origin = '"4L01"'
+    end
+    object FDTOtmpIntegerField4R01: TIntegerField
+      FieldName = '4R01'
+      Origin = '"4R01"'
+    end
+    object FDTOtmpIntegerField4L02: TIntegerField
+      FieldName = '4L02'
+      Origin = '"4L02"'
+    end
+    object FDTOtmpIntegerField4R02: TIntegerField
+      FieldName = '4R02'
+      Origin = '"4R02"'
+    end
+    object FDTOtmpIntegerField4L03: TIntegerField
+      FieldName = '4L03'
+      Origin = '"4L03"'
+    end
+    object FDTOtmpIntegerField4R03: TIntegerField
+      FieldName = '4R03'
+      Origin = '"4R03"'
+    end
+    object FDTOtmpIntegerField4L04: TIntegerField
+      FieldName = '4L04'
+      Origin = '"4L04"'
+    end
+    object FDTOtmpIntegerField4R04: TIntegerField
+      FieldName = '4R04'
+      Origin = '"4R04"'
+    end
+    object FDTOtmpIntegerField4L05: TIntegerField
+      FieldName = '4L05'
+      Origin = '"4L05"'
+    end
+    object FDTOtmpIntegerField4R05: TIntegerField
+      FieldName = '4R05'
+      Origin = '"4R05"'
+    end
+    object FDTOtmpIntegerField4L06: TIntegerField
+      FieldName = '4L06'
+      Origin = '"4L06"'
+    end
+    object FDTOtmpIntegerField4R06: TIntegerField
+      FieldName = '4R06'
+      Origin = '"4R06"'
+    end
+    object FDTOtmpIntegerField4L07: TIntegerField
+      FieldName = '4L07'
+      Origin = '"4L07"'
+    end
+    object FDTOtmpIntegerField4R07: TIntegerField
+      FieldName = '4R07'
+      Origin = '"4R07"'
+    end
+    object FDTOtmpIntegerField4L08: TIntegerField
+      FieldName = '4L08'
+      Origin = '"4L08"'
+    end
+    object FDTOtmpIntegerField4R08: TIntegerField
+      FieldName = '4R08'
+      Origin = '"4R08"'
+    end
+    object FDTOtmpKR4: TBooleanField
+      FieldName = 'KR4'
+      Origin = 'KR4'
+    end
+    object FDTOtmpIntegerField5L01: TIntegerField
+      FieldName = '5L01'
+      Origin = '"5L01"'
+    end
+    object FDTOtmpIntegerField5R01: TIntegerField
+      FieldName = '5R01'
+      Origin = '"5R01"'
+    end
+    object FDTOtmpIntegerField5L02: TIntegerField
+      FieldName = '5L02'
+      Origin = '"5L02"'
+    end
+    object FDTOtmpIntegerField5R02: TIntegerField
+      FieldName = '5R02'
+      Origin = '"5R02"'
+    end
+    object FDTOtmpIntegerField5L03: TIntegerField
+      FieldName = '5L03'
+      Origin = '"5L03"'
+    end
+    object FDTOtmpIntegerField5R03: TIntegerField
+      FieldName = '5R03'
+      Origin = '"5R03"'
+    end
+    object FDTOtmpIntegerField5L04: TIntegerField
+      FieldName = '5L04'
+      Origin = '"5L04"'
+    end
+    object FDTOtmpIntegerField5R04: TIntegerField
+      FieldName = '5R04'
+      Origin = '"5R04"'
+    end
+    object FDTOtmpKR5: TBooleanField
+      FieldName = 'KR5'
+      Origin = 'KR5'
+    end
+    object FDTOtmpIntegerField6L01: TIntegerField
+      FieldName = '6L01'
+      Origin = '"6L01"'
+    end
+    object FDTOtmpIntegerField6R01: TIntegerField
+      FieldName = '6R01'
+      Origin = '"6R01"'
+    end
+    object FDTOtmpIntegerField6L02: TIntegerField
+      FieldName = '6L02'
+      Origin = '"6L02"'
+    end
+    object FDTOtmpIntegerField6R02: TIntegerField
+      FieldName = '6R02'
+      Origin = '"6R02"'
+    end
+  end
+end

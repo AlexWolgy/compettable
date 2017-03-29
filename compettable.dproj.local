@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.630,=D:\mobleTest\compettable\Unit7.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.535,=D:\mobleTest\compettable\Thread.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.597,C:\Users\user.w10082618\Documents\Embarcadero\Studio\Projects\Unit1.fmx=D:\mobleTest\compettable\Unit1.fmx</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.487,D:\mobleTest\compettable\Unit1.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.552,C:\Users\user.w10082618\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\mobleTest\compettable\compettable.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.179,=C:\Users\user.w10082618\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.597,C:\Users\user.w10082618\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\mobleTest\compettable\Unit1.pas</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android="X562XXDH65094289"/>
+	</ActiveMobileDevice>
+	<BT_BuildType>AppStore</BT_BuildType>
+</BorlandProject>
