@@ -1,28 +1,2 @@
+Правка файла из дома
 Первый файл для GitHub
-
-
-
-
-procedure TfrmMain.FormShow(Sender: TObject);
-var ServerNameSamain, DBNameSamain : String;
-begin
-  if not InitSQL(AConn, '', 'M1') then Exit;
-  // Подсоединениие к SAMAIN
-  ServerNameSamain := 'MSSQL1';
-  DBNameSamain := 'SAMAIN';
-  frmMain.ASamainConn.Connected := False;
-  frmMain.ASamainConn.ConnectionString := GetConnectionString(ServerNameSamain, DBNameSamain);
-  frmMain.ASamainConn.Connected := True;
-  ReportConnection := frmMain.ASamainConn;
- // SetButton(nil);
-
- { Необходимо открыть qryAddress до появления frmCallReg, т.к. (только!) при 1-й попытке
- редактировать запись, cbAddress отображает пустую строку }
-  try
-    Screen.Cursor := crHourGlass;
-    if not frmCallReg.qryAddress.Active then
-       frmCallReg.qryAddress.Active := True;
-  finally
-    Screen.Cursor := crDefault;
-  end;
-end;
